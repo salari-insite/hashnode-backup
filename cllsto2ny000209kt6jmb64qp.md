@@ -1,5 +1,7 @@
 ---
 title: "How to Implement and Use APIs in Software"
+seoTitle: "Implement & Utilize APIs in Software"
+seoDescription: "Master software development APIs with this guide covering basics, implementation, and real-life examples for seamless integration and review"
 datePublished: Sun Aug 27 2023 02:19:20 GMT+0000 (Coordinated Universal Time)
 cuid: cllsto2ny000209kt6jmb64qp
 slug: how-to-implement-and-use-apis-in-software
