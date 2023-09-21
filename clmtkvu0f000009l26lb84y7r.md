@@ -1,0 +1,456 @@
+---
+title: "The Matrix Is Everywhere: Linear Algebra Concepts Relevant to Computer Science"
+seoTitle: "Matrix Everywhere: Linear Algebra in Comp Sci"
+seoDescription: "Vectors add and multiply element-wise. Vector spaces are closed sets. Vector-matrix multiplication compactly represents linear systems. Transformation..."
+datePublished: Thu Sep 21 2023 19:40:54 GMT+0000 (Coordinated Universal Time)
+cuid: clmtkvu0f000009l26lb84y7r
+slug: the-matrix-is-everywhere-linear-algebra-concepts-relevant-to-computer-science
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/iar-afB0QQw/upload/a17458d20a3a815e5372c9f31a2d811e.jpeg
+tags: data-science, computer-science, mathematics
+
+---
+
+Disclosure: When you purchase through links on my site, I may earn an affiliate commission. As an Amazon Associate, I earn from qualifying purchases.
+
+> In this article, the author explores the relationship between mathematics and computer science, focusing on the core concepts of linear algebra and their various applications in computer science. Topics covered include linear systems, matrices, Gaussian elimination, vectors, vector spaces, vector-matrix multiplication, and transformations. These concepts are essential in fields such as machine learning, computer graphics, cryptography, and information theory.
+
+---
+
+# Introduction
+
+**This article is part of a series called "**[**Log Base Two**](https://scrappedscript.com/series/log-base-two)**", a series dedicated to the relationship between math and computer science**.
+
+Just to give a bit of background on my experience in math, I've **excelled** in a total of 10 college courses in math:
+
+1. Single-variable differential calculus
+    
+2. Single-variable integral calculus
+    
+3. Multi-variable differential and integral calculus
+    
+4. Multi-variable differential and integral calculus of vector-valued functions
+    
+5. Linear Algebra
+    
+6. Differential equations
+    
+7. Probability and statistics
+    
+8. Data analysis using R programming language
+    
+9. Multivariate statistics
+    
+10. Discrete math
+    
+
+For a large majority of those 10 classes, I ended up with A's.
+
+Although, before college, I struggled a lot with math in the classroom, even though math had always been my favorite subject since I was in elementary school. I found it hard to truly grasp the concepts taught because my high school teachers were too focused on skill assessment. Instead of focusing on the actual concept being taught, I was too worried about how I was going to pass the test the following week.
+
+Once I got to college, I realized that your math grade (or any grade for that matter) truly doesn't define your potential. Further, I'd argue that your success in math *education* is heavily influenced by the quality of the teacher/professor's teaching.
+
+My mission with this series is to show other people that math isn't so scary if you break down mathematical concepts into digestible bouts of information and investigate use cases of math in your primary field of interest (in this case, computer science). Along the way, I hope to also supplement your math education with quality content. I believe that **everyone** is capable of learning and truly loving mathematics.
+
+**New articles in this series are posted every Thursday. If you have any suggestions for a specific topic I should write about, please comment it down below!**
+
+---
+
+# What Even is Linear Algebra?
+
+![math equations](https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 align="center")
+
+Linear algebra is a subfield of mathematics that concentrates on linear systems, matrices, and vectors. Through the employment of these three fundamental elements, a multitude of advancements have been achieved in various domains, both within and beyond the sphere of mathematics.
+
+## Why Haven't I Heard About Linear Algebra Before?
+
+If you're still at the beginning of your computer science journey, you might've not been exposed to linear algebra quite yet.
+
+Typically, the first opportunity to take a course in linear algebra is in your 2nd or 3rd year of college. Additionally, colleges usually require you to pass single-variable calculus before being able to enroll in linear algebra.
+
+On top of this, most non-STEM majors in college don't require students to pass any college-level math past single-variable calculus and statistics.
+
+The funny thing is that linear algebra isn't *harder* than calculus. In fact, A majority of my classmates in university, myself included, believe that linear algebra is a bit *easier* than calculus.
+
+Also, linear algebra doesn't directly use any tools or concepts from calculus, so you can't even make the argument that you first need to gain prerequisite information from calculus to understand linear algebra.
+
+So if linear algebra isn't harder than calculus, and there's no prerequisite information gained from calculus, then why does it seem so exclusive and "higher level"?
+
+While I don't have an official answer, I have an opinion as to why this is the case.
+
+I believe that it comes down to two main factors:
+
+* Linear algebra's industrial uses are not as widespread as the branches of math that are taught before it
+    
+    * While **both** calculus and linear algebra are pretty much only used in STEM and a few other industries (finance, economics, some arts), their uses within those industries are not equal
+        
+* Linear algebra is a "mature" math
+    
+    * I know I said that linear algebra is sometimes seen as easier than calculus, but linear algebra's *concepts* are much more abstract than concepts in single-variable calculus
+        
+
+With all that being said, there's no problem with getting a head start on learning linear algebra if you're still in school right now.
+
+And if you're going the self-taught route with computer science, then all the more reason to self-teach the math used in computer science!
+
+---
+
+# Key Linear Algebra Concepts Used in Computer Science
+
+![a computer generated image of a human head](https://cdn.pixabay.com/photo/2018/09/27/09/22/artificial-intelligence-3706562_1280.jpg align="center")
+
+I've carefully curated a list of 9 concepts in linear algebra that are used across various branches of computer science including machine learning, computer graphics, cryptography, image processing, information theory, and much more.
+
+For each of these concepts, I'll provide enough general information so you can understand the big picture, and I'll also mention an example of a branch of computer science that uses the concept.
+
+Also, I ordered the concepts in chronological order to have the concepts build on top of each other and improve the flow of the article.
+
+To not overflow this article with information, I'm going to split this information into two articles. I'll cover the first 5 concepts in this article, and the last 4 concepts in a future article.
+
+For reference, here are all of the 9 concepts that I'll be covering, with the concepts that I'll be covering in this article highlighted in yellow:
+
+* **<mark>Linear systems</mark>**
+    
+* **<mark>Matrices and Gaussian elimination</mark>**
+    
+* **<mark>Vectors and vector spaces</mark>**
+    
+* **<mark>Vector-matrix multiplication and the Matrix Equation</mark>**
+    
+* **<mark>Transformations</mark>**
+    
+* **Orthogonality**
+    
+* **Determinants**
+    
+* **Eigenvalues and eigenvectors**
+    
+* **Singular value decomposition**
+    
+
+Please keep in mind that I'll only be scratching the surface of all of these concepts. If you're self-teaching linear algebra to pivot into a branch of computer science that uses linear algebra, then I highly recommend [**Introduction to Linear Algebra by Gilbert Strang**](https://amzn.to/3sXB8Ak)**.** This is the same textbook that was used in my college linear algebra course. The structure of the content in this textbook is organized in a well-written format and is easily digestible for self-teaching.
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=scrappedscrip-20&language=en_US&marketplace=amazon&region=US&placement=1733146679&asins=1733146679&linkId=6bac7906e0be2e610f9e48ec4d067a1b&show_border=true&link_opens_in_new_window=true"></iframe>
+
+## I. Linear systems
+
+A linear system can be defined as an assembly of multiple <mark>linear equations</mark> that share a common set of variables. These equations are interconnected, and their solutions are represented by the values of the variables that <mark>simultaneously</mark> satisfy all the equations within the system.
+
+One application of linear systems lies in numerical analysis. Numerical analysis involves utilizing algorithms to find approximate numerical solutions for problems where obtaining the exact numerical solution is either impossible or too complex to resolve.
+
+### Linear equations
+
+A linear equation is an equation that consists of *n* variables each with a degree of 1.
+
+The general form of a linear equation is:
+
+$$a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b$$
+
+The 3 main components of a linear equation are:
+
+* a set of coefficients
+    
+
+$$\{a_1, a_2, \ldots, a_n\}$$
+
+* a set of variables
+    
+
+$$\{x_1, x_2, \ldots, x_n\}$$
+
+* a constant *b*
+    
+
+In linear systems of equations, each equation contains the same set of variables but doesn't necessarily have the same set of coefficients.
+
+Putting together a system of *m* linear equations takes the general form:
+
+$$a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n = b_1$$
+
+$$a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n = b_2$$
+
+$$\vdots$$
+
+$$a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n = b_m$$
+
+### Simultaneous solution
+
+![a couple of heads with question marks coming out of them](https://cdn.pixabay.com/photo/2017/07/19/16/44/questions-2519654_1280.png align="center")
+
+The main idea behind a system of equations is that all equations within the system can be solved *simultaneously*.
+
+By doing so, it becomes possible to find a unique solution, or a set of solutions, that satisfies all the given equations, thereby providing a comprehensive understanding of the problem at hand.
+
+## II. Matrices and Gaussian elimination
+
+As a way to simply store a linear system in a mathematical object that can be operated on, we use a <mark>matrix</mark>. Not only do matrices provide a way to store a linear system, but they simplify the process of being able to solve linear systems through a method called <mark>Gaussian elimination</mark>.
+
+Matrices are found throughout computer science. One of the most common uses of matrices in this field is computer graphics. In animation, for instance, a matrix can be used to define a specific transformation for an object. These matrix transformations enable movement, rotation, and resizing of an object by establishing a new set of coordinates for the object's representation in the animation.
+
+### Matrices
+
+A matrix is simply an array of numbers arranged into *m* rows and *n* columns. Each row in a matrix represents all of the variables' coefficients for each equation, and each column represents all of the coefficients applied to a singular variable in the system.
+
+$$\begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}$$
+
+The above matrix only contains the coefficients in a linear system. If we wanted to include the linear system's constants in a matrix, the standard notation for doing so is with an augmented matrix:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694496706146/45bcdcd8-1913-4f46-8824-298bdff3bd75.png align="center")
+
+In an augmented matrix, the values on the right side of the vertical bar represent the constants in the linear equations. Typically we use augmented matrices when solving linear systems so that we can arrive at a solution that involves the constants in the equations.
+
+### Gaussian Elimination
+
+![](https://cdn.pixabay.com/photo/2017/10/27/18/38/infographic-2895154_1280.png align="center")
+
+One method for solving a linear system involves employing a technique known as Gaussian elimination on a matrix.
+
+Gaussian elimination is essentially an algorithm where you apply row operations to a matrix to reduce the matrix to what's called *row echelon form*. A matrix is in row echelon form when it satisfies the following conditions:
+
+* All rows filled with all zeros are at the bottom of the matrix
+    
+* The leading entry (leftmost non-zero entry) of every non-zero filled row is equal to 1
+    
+* The leading entry of every non-zero filled row is to the right of the leading entry of the row above it
+    
+
+Once a matrix is in row echelon form, you can start to find the values of all the variables using basic algebra.
+
+I know all that seems confusing, but when you see it in practice, it might make some more sense.
+
+Here's an example of applying Gaussian elimination on an augmented matrix to achieve row echelon form:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694499096373/ed40d79a-1f44-4f5e-91b1-02b56ed3b207.png align="center")
+
+In the above example, I first chose to multiply all the values in the 1st row by half, since that would make the first entry in the 1st row equal to 1.
+
+For the next row operation, I noticed that the 2nd row's first entry was already 0, meaning my only goal was to make that 7 in the 2nd row turn into a 1. As such, I multiplied the entire row by 1/7.
+
+As you can see, the 3rd row needed some more work than the first two rows.
+
+For the 3rd row, I first added the 1st row's values to it, so that I could turn the first entry into a 0.
+
+My next task was to make the 3rd row's second entry a 0, so I made the 3rd row negative and then added the 2nd row's values multiplied by 1.5.
+
+My last and final step was to simply make the 3rd row's third entry equal to 1, so I just had to multiply the row by -14/41.
+
+As you can see, after applying all of those row operations on the matrix, we end up with a matrix that is in row echelon form.
+
+The resulting matrix doesn't have any zero-filled rows, so we don't have to worry about satisfying the condition that all zero-filled rows are at the bottom of the matrix.
+
+For the other two conditions, the leading entry in each row is equal to 1, and the leading entry in each row is to the right of the leading entry in the row above it.
+
+Now that we have the matrix in row echelon form, we can easily calculate the values of each of the variables using basic algebra.
+
+The 3rd row tells us that the third variable is equal to -36/41.
+
+We can now plug the third variable's value into the 2nd row, and find that the second variable is equal to 19/41.
+
+Finally, we can plug the second variable and third variable's values into the first row, and find that the first variable is equal to 122/41.
+
+## III. Vectors and vector spaces
+
+![](https://cdn.pixabay.com/photo/2016/07/18/17/28/electromagnetic-waves-1526374_1280.png align="center")
+
+A <mark>vector</mark> is a quantity that is described by both a magnitude and direction. A <mark>vector space</mark> is a set of vectors, where each of the vectors in the vector space follows a defined list of rules. I'll go into more detail about vector spaces further down.
+
+One example of vectors and vector spaces being utilized in computer science is within web information retrieval systems employed by search engines. Vectors are employed to represent webpage documents and search queries. By implementing a vector space model, search engines can provide relevant results in response to a user's search query.
+
+### Vectors
+
+One of the simplest examples of a vector is a vector from one point to another point on a 2-dimensional plane.
+
+For example, if you have a plot a point ***A*** at (0, 0) in the Cartesian coordinate system, and then plot another point ***B*** at (4, 6), the vector from ***A*** to *B* would be:
+
+$$\vec{v} = \begin{pmatrix} 4 \\ 6 \end{pmatrix}$$
+
+Imagine that you're standing on point ***A***, and your friend is at point ***B***, the vector above tells you that you'd need to travel 4 units to the right on the x-axis, followed by 6 units up on the y-axis.
+
+A vector's size is typically described by the dimension of the vector. A vector's dimension is equivalent to the amount of elements in the vector. The vector in the above example is a 2-dimensional vector since it has 2 elements.
+
+A vector can be anything from 0-dimensional to an infinite-dimensional vector.
+
+The dimension of a vector is crucial when determining whether a vector exists within a specific vector space. Before delving into the details of vector spaces, I will first discuss some vector operations and definitions to help you comprehend the concept of vector spaces.
+
+### Vector Addition
+
+If you add a vector to another vector, the result is another vector. For two vectors to be able to be added together, they must be of the same dimension.
+
+When adding two vectors together, you add each element from the first vector to another element in the second vector, based on the element's index in the first vector.
+
+Here's an example of adding two 3-dimensional vectors together:
+
+$$\begin{pmatrix} 4 \\ 6 \\ 1 \end{pmatrix} + \begin{pmatrix} 3 \\ 7 \\ 2 \end{pmatrix} = \begin{pmatrix} 7 \\ 13 \\ 3 \end{pmatrix}$$
+
+First, I added the 1st element in the first vector to the 1st element in the second vector to obtain the 1st element in the resultant vector (4 + 3 = 7).
+
+Second, I added the 2nd element in the first vector to the 2nd element in the second vector to obtain the 2nd element in the resultant vector (6 + 7 = 13).
+
+Finally, I added the 3rd element in the first vector to the 3rd element in the second vector to obtain the 3rd element in the resultant vector (1 + 2 = 3).
+
+### Scalar Multiplication
+
+Scalar multiplication is the operation of multiplying a vector by a number (effectively scaling the vector). The result of scalar multiplication is another vector.
+
+When multiplying a vector by a scalar, you multiply each element in the vector by the scalar.
+
+Here's an example of multiplying a 4-dimensional vector by a scalar:
+
+$$2 \begin{pmatrix} 4 \\ 8 \\ 0 \\ -2 \end{pmatrix} = \begin{pmatrix} 8 \\ 16 \\ 0 \\-4 \end{pmatrix}$$
+
+First, I multiplied the 1st element in the vector by the scalar to get the 1st element in the resultant vector (2 \* 4 = 8). And then I just repeated this process for the rest of the elements in the vector.
+
+### Zero Vector
+
+![a metal object is shown in the dark](https://cdn.pixabay.com/photo/2017/01/15/17/39/number-1982207_1280.png align="center")
+
+The zero vector is simply a vector of any dimension where every element's value is 0.
+
+Typically the zero vector is denoted by the following:
+
+$$\vec{0}$$
+
+While zero vectors are a very simple concept, they are a requirement of vector spaces, as you'll see below.
+
+### Vector Spaces
+
+As I stated at the beginning of this section, vector spaces are simply a set of vectors that follow a set of 10 defined rules (or axioms). The rules are as follows:
+
+For each of the 10 axioms below, let ***V*** be a vector space over the field of real numbers, let **u**, **v**, and **w** be distinct vectors in vector space ***V***, and let **a** and **b** be distinct real numbers.
+
+$$V \in \mathbb{R}^{n} \; \vert \; \vec{u},\vec{v}, \vec{w} \in V \; \vert \; a, b \in \mathbb{R}$$
+
+1. Closed under addition
+    
+
+$$(\vec{u} + \vec{v}) \in V$$
+
+1. Commutative under addition
+    
+
+$$\vec{u} + \vec{v} = \vec{v} + \vec{u}$$
+
+1. Associative under addition
+    
+
+$$(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$$
+
+1. Additive identity
+    
+
+$$\vec{0} + \vec{u} = \vec{u}$$
+
+1. Additive inverse
+    
+
+$$\vec{u} + -\vec{u} = \vec{0}$$
+
+1. Closed under scalar multiplication
+    
+
+$$a(\vec{u}) \in V$$
+
+1. Multiplicative identity
+    
+
+$$1(\vec{u}) = \vec{u}$$
+
+1. Associative under scalar multiplication
+    
+
+$$(ab)\vec{u} = a(b\vec{u})$$
+
+1. Distributive property of scalars under scalar multiplication
+    
+
+$$a(\vec{u} + \vec{v}) = a\vec{u} + a\vec{v}$$
+
+1. Distributive property of vectors under scalar multiplication
+    
+
+$$(a + b) \vec{u} = a\vec{u} + b\vec{u}$$
+
+Vector spaces play a crucial role in linear transformations, vector scaling, and various other vector operations, which are essential in the fields of linear algebra and computer science.
+
+## IV. Vector-matrix multiplication and the Matrix Equation
+
+One of the operations that we can do on matrices and vectors is by multiplying a matrix by a vector. The result from multiplying a matrix by a vector is another vector, and these 3 components make up what's called a <mark>matrix equation</mark>.
+
+Vector-matrix multiplication is a fundamental operation in data science. For example, multiple linear regression models utilize vector-matrix multiplication to determine a vector of regression coefficients, which helps predict the outcome of a dependent variable within a dataset.
+
+### Vector-Matrix multiplication
+
+For a *m* x *n* matrix to be multiplied by a vector, the vector must be *m*\-dimensional. The resulting vector from multiplying a matrix by a vector is *n*\-dimensional.
+
+The steps to multiply a matrix by a vector involve finding the linear combination of the columns of the matrix represented as vectors, where each column's vector is multiplied by a scalar corresponding with an element in the original vector.
+
+Here's an example of multiplying a 2 x 3 matrix by a 3-dimensional vector to get a 2-dimensional vector:
+
+$$\begin{pmatrix} 1 & 4 & 9 \\ 2 & 7 & -3 \end{pmatrix} \begin{pmatrix} 8 \\ -1 \\ 0 \end{pmatrix} = 8 \begin{pmatrix} 1 \\ 2 \end{pmatrix} + -1 \begin{pmatrix} 4 \\ 7 \end{pmatrix} + 0 \begin{pmatrix} 9 \\ -3 \end{pmatrix} = \begin{pmatrix} 4 \\ 9 \end{pmatrix}$$
+
+### The Matrix Equation
+
+One of the ways to represent a linear system of equations is with a matrix equation:
+
+$$A\vec{x} = \vec{b}$$
+
+In a matrix equation, ***A*** represents a matrix filled with the variables' coefficients in the linear system, **x** represents a vector filled with the variables in the linear system, and **b** represents a vector filled with the constants in the linear system.
+
+## V. Transformations
+
+![a black background with blue waves on it](https://cdn.pixabay.com/photo/2022/04/21/06/11/waves-7146711_1280.jpg align="center")
+
+When a vector is operated on and the resulting vector is in a different dimension, then we say that the original vector was transformed. Transformations of vectors are analogous to functions in basic algebra. Since the product of a *m* x *n* matrix and a *n*\-dimensional vector results in a *m*\-dimensional vector, we can generally think of matrices as being transformations when applied to vectors. By definition, matrix transformations are <mark>linear transformations</mark>.
+
+One of the most common uses of transformations in computer science is in signal processing. Specifically, there is a particular transformation called the Discrete Fourier Transform, which is used to convert a signal's time vector (or, for example, an image's digital signal vector of pixels) into a signal's frequency vector. This allows for tasks such as image compression, audio editing, and the transmission of digital signals.
+
+A transformation from the *n*th dimension to the *m*th dimension is a function that maps an *n*\-dimensional vector to an *m*\-dimensional vector. The general notation for a transformation is:
+
+$$T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$$
+
+### Matrices as transformations
+
+Let ***A*** be an *m* x *n* matrix, and let ***T*** represent a transformation.
+
+The matrix transformation by A is then defined as:
+
+$$T(\vec{x}) = A(\vec{x})$$
+
+This transformation maps the vector **x** to the resultant vector of multiplying the matrix ***A*** by the vector **x**.
+
+### Linear transformations
+
+Linear transformations are simply transformations on a linear combination of vectors. The general definition of a linear transformation is:
+
+Let ***T*** be the transformation:
+
+$$T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$$
+
+Let **u** and **v** be arbitrary vectors such that:
+
+$$\vec{u},\vec{v} \in \mathbb{R}^n \; | \; T(\vec{u}), T(\vec{v}) \in \mathbb{R}^m$$
+
+Let **a** and **b** be arbitrary scalars such that:
+
+$$a,b \in \mathbb{R}$$
+
+We can then define ***T*** as a linear transformation such that:
+
+$$T(a\vec{u} +b\vec{v}) = aT(\vec{u}) + bT(\vec{v})$$
+
+By definition, every matrix transformation is a linear transformation.
+
+The main advantage of linear transformations over non-linear transformations is that linear transformations preserve the linearity of the variables. A linear transformation is what allows for vectors to be mapped to another dimension where the same rules of vector operations exist.
+
+---
+
+# Conclusion
+
+In this article, I've given a crash course on some of the basic linear algebra concepts used in various branches of computer science.
+
+Although, please keep in mind that I've only scratched the surface of all of these concepts. If you want more in-depth knowledge of these concepts and other concepts in linear algebra, I highly recommend [**Introduction to Linear Algebra by Gilbert Strang**](https://amzn.to/44VFQvs)**.** This is the same textbook that was used in my college linear algebra course. The structure of the content is highly organized and easily digestible for self-teaching.
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=scrappedscrip-20&language=en_US&marketplace=amazon&region=US&placement=1733146679&asins=1733146679&linkId=79d8a6d7ff65401f908bb240d971ba6d&show_border=true&link_opens_in_new_window=true"></iframe>
+
+Please comment down below if you have any lingering questions or suggestions for an article topic that I should cover in the future.
+
+As stated previously, I'll be covering the rest of the linear algebra concepts (orthogonality, determinants, eigenvalues and eigenvectors, and singular value decomposition) in a future article. To stay up to date and not miss out when I post new articles, make sure to subscribe to my newsletter!
