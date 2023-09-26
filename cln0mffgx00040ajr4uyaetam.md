@@ -1,0 +1,344 @@
+---
+title: "Which Programming Language Should You Learn First?"
+seoTitle: "Best First Programming Language to Learn"
+seoDescription: "Explore top beginner programming languages for web, mobile app, machine learning, and cybersecurity. Select based on interests, goals, and trends"
+datePublished: Tue Sep 26 2023 17:58:31 GMT+0000 (Coordinated Universal Time)
+cuid: cln0mffgx00040ajr4uyaetam
+slug: which-programming-language-should-you-learn-first
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/ZIPFteu-R8k/upload/b3acb501bdac5b8ae9b59ab89554236f.jpeg
+tags: javascript, python, machine-learning
+
+---
+
+> In this article, I discuss the importance of choosing your first programming language and factors to consider when making your selection. I also provide recommendations for the best programming languages to learn first for various fields, such as web development, mobile app development, machine learning, and cybersecurity. Ultimately, the first language you learn should align with your personal interests, goals, and desired career path, but remember that the core of software development is problem-solving using logic, which can be applied to any programming language.
+
+---
+
+# Introduction
+
+**This article is part of a series called "**[**Bit by Bit**](https://scrappedscript.com/series/bit-by-bit)**", a series devoted to all things programming. Whether you're still a computer science undergrad or the CTO of Apple, there's something for you here.**
+
+**New articles in this series are posted every Tuesday!**
+
+---
+
+# Importance of choosing your first programming language
+
+If you've chosen to enroll in a university, then the first programming language you learn is dependent upon the language that's used in your university's Intro to Programming course.
+
+But if you've made the courageous decision to take the self-taught route of learning software development, then you have to make that nerve-wracking decision of which programming language you'll learn first.
+
+But I'd argue that the first programming language you learn doesn't mean anything in the grand scheme of things.
+
+What's most important in learning software development is not which languages you can code in or how you can memorize a language's syntax.
+
+No matter which type of development you decide to do, the core of all software development is the ability to solve problems using logic.
+
+Based on my own journey, I know firsthand that the first language that one learns means almost nothing.
+
+The first programming language I learned was RobotC in a class I took on cognitive robotics, a required course for my B.A. in psychology.
+
+RobotC is a high-level programming language based on the C programming language and is almost exclusively used for robotics programming in educational settings.
+
+So basically, it's a language that I'll probably never use again.
+
+However, this course taught me how to *think* like a software engineer and stimulated my interest in computer science.
+
+Moral of the story? All that matters in learning your first language is that you learn the core of what software engineering is all about.
+
+---
+
+# Factors to consider when selecting a programming language
+
+I know I just said that the programming language you learn first doesn't matter, but there's also no issue with wanting to start with learning a language geared toward the overall path that you want to take.
+
+With that being said, here are some factors that you could consider when choosing your first programming language.
+
+## Personal interests
+
+The most important factor in choosing your first programming language is considering who you are as an individual.
+
+Forget about all the external pressure of choosing the most in-demand language.
+
+What matters is choosing something for yourself so you stay motivated to continue growing in software engineering.
+
+## Personal goals
+
+The second factor you should consider is what you ultimately want to create with software engineering.
+
+While some programming languages can be used in pretty much every type of development, some languages can only be used in **one** type of development (such as my first language, RobotC).
+
+For this reason, if you want to increase the chances of learning a language that you'll use for the rest of your journey, then it's important to think about what exactly you want to build.
+
+## Community support
+
+You are far more likely to stay motivated if you learn with others than if you learn alone.
+
+Additionally, choosing a language that is "popular" will increase the likelihood that you can find an opportunity to collaborate on a project with a team, or contribute to an open-source project.
+
+## Ease of learning
+
+Some people may tell you to first learn a language like Java or C++ so that you understand how computers compile code into machine instructions.
+
+However, *compiled* languages can be very difficult to learn as a first language.
+
+Software engineering takes a lot of grit as it is, so it's best to start with an *interpreted* language to get the fundamentals down.
+
+## Versatility
+
+If you don't have a set goal in mind with software engineering, then this point is especially important.
+
+Choosing a versatile language will allow you to maximize the variety of types of projects that you can create while learning your first language, as well as enable you to test different types of development to see what you like best.
+
+## Job market and industry trends
+
+![a close up of two people shaking hands](https://images.unsplash.com/photo-1521790797524-b2497295b8a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80 align="center")
+
+I'd argue that this factor should hold the least weight in choosing your first language to learn.
+
+There are always trendy languages and libraries coming and going. While these trendy languages have a strong moment, a lot of them eventually fade away.
+
+You should start with learning one of the core languages that have stood strong for decades, as these languages are probably not going anywhere anytime soon.
+
+Additionally, the job market's demand for developers with a background in a specific language is always changing.
+
+---
+
+# Best programming language to learn first overall
+
+## Python
+
+### Uses
+
+* Web development
+    
+* Scientific computing
+    
+* Machine learning and artificial intelligence
+    
+* Desktop app development
+    
+* Data analysis
+    
+* Data visualization
+    
+* API development
+    
+* Language development
+    
+* Blockchain development
+    
+* Quality assurance software testing
+    
+
+### Pros
+
+* Easy to learn and use
+    
+* Incredibly versatile
+    
+* Strong community of developers
+    
+* Free and open-source
+    
+* Cross-platform
+    
+
+### Cons
+
+* Slow speed
+    
+* Heavy memory usage
+    
+
+---
+
+# Best programming language to learn first for web development
+
+![a computer monitor sitting on top of a desk next to a keyboard](https://images.unsplash.com/photo-1669023414162-8b0573b9c6b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80 align="center")
+
+## JavaScript
+
+### Uses within web development
+
+* Dynamic webpage development
+    
+* Browser-side scripting
+    
+* Server-side scripting
+    
+* Web API development
+    
+
+### Pros
+
+* Large selection of built-in and external libraries
+    
+* *Practically* the only programming language that is used for browser-side scripting
+    
+* Easy to learn and use
+    
+* Strong community of developers
+    
+* Free to use
+    
+
+### Cons
+
+* Requires a run-time environment
+    
+* Beginner mistakes can easily lead to security risks and vulnerabilities
+    
+* Not very versatile outside of web development
+    
+
+---
+
+# Best programming language to learn first for mobile app development
+
+![two iphones sitting next to each other on a white surface](https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80 align="center")
+
+## Swift
+
+### Uses within mobile app development
+
+* iOS app development
+    
+* Android app development
+    
+
+### Pros
+
+* Besides Objective-C, Swift is the only programming language supported by iOS
+    
+* Easy to learn and use
+    
+* Free and open-source
+    
+* Ability to develop both iOS and Android apps with a single code base
+    
+* Incredibly fast
+    
+
+### Cons
+
+* Not very versatile outside of mobile app development
+    
+* Very new language
+    
+* Small selection of external libraries
+    
+* Small community of developers
+    
+
+---
+
+# Best programming language to learn first for machine learning and artificial intelligence
+
+![a robot is holding a tablet with a picture on it](https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80 align="center")
+
+## Python
+
+### Uses within ML and AI
+
+* Unsupervised and supervised learning algorithms
+    
+* Natural language processing
+    
+* Facial recognition
+    
+* Fraud detection
+    
+* Refining search results
+    
+* Spam detection
+    
+* Pharmaceutical drug research analysis
+    
+* Self-driving cars
+    
+* Cancer research analysis
+    
+* Financial analysis
+    
+* Malware detection
+    
+* Optimized digital marketing
+    
+
+### Pros of using Python for ML and AI
+
+* Large selection and variety of external libraries meant for ML and AI
+    
+* Large community of developers that use Python for ML and AI
+    
+* Simple to use compared to other languages used for ML and AI
+    
+* Incredibly versatile within the broad realm of "big data"
+    
+* Easy to integrate due to Python's cross-platform nature
+    
+
+### Cons of using Python for ML and AI
+
+* Slow speed
+    
+
+---
+
+# Best programming language to learn first for cybersecurity
+
+![a hacker sitting at a table coding on computer](https://images.unsplash.com/photo-1660644808226-a5b2e691fc51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80 align="center")
+
+## Python
+
+### Uses within cybersecurity
+
+* Network scanning
+    
+* Vulnerability detection
+    
+* Log analysis
+    
+* Penetration testing
+    
+* Malware analysis
+    
+* Port scanning
+    
+* Ethical hacking
+    
+
+### Pros
+
+* Large selection and variety of external libraries meant for cybersecurity
+    
+* Large community of developers that use Python for cybersecurity
+    
+* Simple to use compared to other languages used for cybersecurity
+    
+* Incredibly versatile within the broad realm of IoT
+    
+* Easy to identify attacks from any operating system due to Python's cross-platform nature
+    
+
+### Cons
+
+* Slow speed
+    
+
+---
+
+# Conclusion
+
+I hope that after reading this article, you feel more confident in choosing your first programming language.
+
+Remember that it's okay if you don't know what you want to do yet. As long as you focus on learning how to solve problems using logic, then you'll be able to translate that knowledge into any other language down the line.
+
+At the same time, it's okay to want to start by learning a language that can directly be used in the type of development that you want to do in the future.
+
+If you're about to start learning how to program and have chosen which language you want to learn, then please share which language you chose and why in the comments below!
+
+If you have any lingering questions or suggestions for a topic you want me to cover in the future, feel free to post those in the comments as well.
+
+Lastly, make sure to follow my newsletter so that you don't miss out on when I post new content.
