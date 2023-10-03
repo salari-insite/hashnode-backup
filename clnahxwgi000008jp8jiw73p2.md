@@ -1,0 +1,589 @@
+---
+title: "Python Data Types Made Easy: A Comprehensive Guide"
+seoTitle: "Python Data Types Simplified"
+seoDescription: "Master Python data types: booleans, integers, floats, complex numbers, strings, lists, tuples, sets, dictionaries; learn operations and examples"
+datePublished: Tue Oct 03 2023 15:50:36 GMT+0000 (Coordinated Universal Time)
+cuid: clnahxwgi000008jp8jiw73p2
+slug: python-data-types-made-easy-a-comprehensive-guide
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/Nz0LoJB4d0g/upload/b3f004762a5b7f1db23537742ab867e7.jpeg
+tags: software-development, python, data-structures
+
+---
+
+> This article covers the basics of various data types in Python, including booleans, integers, floats, complex numbers, strings, lists, tuples, sets, and dictionaries. It provides an overview of each data type, along with examples of basic operations and functions that can be applied to them.
+
+---
+
+# Introduction
+
+![a person typing on a laptop on a desk](https://cdn.hashnode.com/res/hashnode/image/upload/v1694158493008/jsZzIo77t.jpg?w=800&auto=compress align="center")
+
+**This article is part of a series called "**[**Bit by Bit**](https://scrappedscript.com/series/bit-by-bit)**", a series devoted to all things programming. Whether you're still a computer science undergrad or the CTO of Apple, there's something for you here.**
+
+**New articles in this series are posted every Tuesday!**
+
+---
+
+## I. Boolean data types
+
+![a white object on a blue background with a shadow](https://images.unsplash.com/photo-1635241161466-541f065683ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80 align="center")
+
+Boolean data types serve as the fundamental building blocks of logic in programming.
+
+Boolean data types play a critical role in many aspects of programming, including conditional statements, loops, and comparisons. They allow programmers to develop complex algorithms and control the flow of execution in their code, ultimately enabling the creation of sophisticated software applications that can adapt to various situations and user inputs.
+
+### a) True and false values
+
+Even when you're not directly declaring and storing variables with a boolean value, there's a good chance that you're using boolean values in the background of your programming.
+
+With that being said, there are times when it's useful to declare and store variables with boolean values.
+
+One small, but important, thing to note is that when using the True and False values in Python, make sure to capitalize the first letter of the words True and False.
+
+```python
+# Declare boolean variables
+a = True
+b = False
+
+#basic operations
+
+#and operation
+#returns True if BOTH values are True
+and_value = a & b
+#print(and_value) --> False
+
+#or operation
+#returns True if at least one of the values is True
+or_value = a | b
+#print(or_value) --> True
+
+#is operation
+#returns True if values are equal
+is_value = a == b
+#print(is_value) --> False
+
+#is not operation
+#returns True if values are not equal
+is_not_value = a != b
+#print(is_not_value) --> True
+```
+
+---
+
+## II. Numeric data types
+
+![a green button with white mathematical operators](https://cdn.hashnode.com/res/hashnode/image/upload/v1695710899530/40fe6525-2fe3-4720-9880-129b3da02450.png align="center")
+
+Numeric data types are among the most basic types of data. They are essential for performing calculations, designing algorithms, and developing intricate programs.
+
+### a) Integers
+
+As you may recall from grade-school math, integers are a subset of the set of rational numbers where each integer is a number that can't be expressed as a ratio of two numbers except for itself and 1.
+
+Integers can be positive or negative values, or zero, and are written without decimal points.
+
+The main operations that are performed on integers in Python are arithmetic and comparison.
+
+```python
+# Creating integers
+x = 5
+y = -3
+
+#arithmetic operations
+#addition
+total = x + y
+#print(total) --> 2
+
+#subtraction
+difference = x - y
+#print(difference) --> 8
+
+#multiplication
+product = x * y
+#print(product) --> -15
+
+#division
+quotient = x / y
+#print(quotient) --> -1.6666666666666667
+
+#modular division
+remainder = x % y
+#print(remainder) --> -1
+
+#floor division
+rounded_down_quotient = x // y
+#print(rounded_down_quotient) --> -2
+
+#exponentiation
+result = x ** y
+#print(result) --> 0.008
+
+#comparison operations
+#greater than
+greater_than = x > y
+#print(greater_than) --> True
+
+#less than
+less_than = x < y
+#print(less_than) --> False
+
+#equal to
+equal_to = x == y
+#print(equal_to) --> False
+
+#not equal to
+not_equal_to = x != y
+#print(not_equal_to) --> True
+
+#greater than or equal to
+greater_or_equal = x >= y
+#print(greater_or_equal) --> True
+
+#less than or equal to
+less_or_equal = x <= y
+#print(less_or_equal) --> False
+```
+
+### b) Floats
+
+Floats, or floating-point integers, are any numbers written with a decimal point.
+
+Technically speaking, a number that's formally defined as an integer in math can be stored as a *floating-point integer*.
+
+For example, 6.00 is an integer in math, but since it has a decimal point it's stored as a floating-point integer in Python.
+
+Floating-point integers and integers can have their values compared in Python. For example, when you use a comparison operator to check if 6.00 is equal to 6, Python returns True.
+
+However, if you use a comparison operator to check if the data type of 6.00 is the same as the data type of 6, Python returns false.
+
+![python idle code example](https://cdn.hashnode.com/res/hashnode/image/upload/v1696346135183/2ef6cc33-c4c9-487d-bf79-31eb773a9c79.png align="center")
+
+Similar to integer data types, the main operations performed on floats are arithmetic and comparison.
+
+As you might expect, you can apply all of those same operations in the integers code example I made with floating point values in Python.
+
+### c) Complex numbers and imaginary numbers
+
+For anyone in the field of quantum mechanics or electrical engineering, you're in luck ;)
+
+In case you're unaware or need a quick refresher, complex numbers are 2-dimensional numbers where the first component is a real number and the second component is an imaginary number.
+
+On the most basic level, imaginary numbers are expressed as a real number multiplied by the imaginary unit, *i*.
+
+$$i = \sqrt{-1}$$
+
+ $$ i^2 = -1$$
+
+Complex numbers are typically expressed as a linear combination of a real number and an imaginary number.
+
+$$z = 3 + 2i$$
+
+If you have any computational tasks that involve complex numbers, Python fortunately has a built-in module called "cmath" to be able to work with complex numbers.
+
+```python
+import cmath
+
+# Creating complex numbers
+complex_num1 = 3 + 4j
+complex_num2 = 2 + 3j
+
+#arithmetic operations
+#addition
+total = complex_num1 + complex_num2
+#print(total) --> (5+7j)
+
+#subtraction
+difference = complex_num1 - complex_num2
+#print(difference) --> (1+1j)
+
+#multiplication
+product = complex_num1 * complex_num2
+#print(product) --> (-6+17j)
+
+#division
+quotient = complex_num1 / complex_num2
+#print(quotient) --> (1.3846153846153848-0.07692307692307697j)
+
+#complex conjugate
+conjugate = complex_num1.conjugate()
+#print(conjugate) --> (3-4j)
+
+#magnitude
+magnitude = abs(complex_num1)
+#print(magnitude) --> 5.0
+```
+
+---
+
+## III. String data types
+
+![a close up of a pile of colorful wooden blocks with letters on them](https://images.unsplash.com/photo-1581544291234-31340be4b1b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80 align="center")
+
+String data types are another very basic type of data in Python. These data types are utilized to store and manipulate sequences of characters, such as letters, numbers, symbols, and whitespace. Strings play a crucial role in various programming tasks, including data manipulation, user input processing, and output formatting.
+
+### a) Strings
+
+Strings are data objects that can store any of the characters on a keyboard.
+
+When you declare and store a string in Python, you can use either single or double quotes to encapsulate the characters that are part of your string.
+
+There are a large number of operations and functions that can be applied to strings in Python.
+
+When working with strings there are some important things to know/remember:
+
+* Capitalization matters. Each letter has a separate memory allocation for the uppercase and lowercase versions of the letter
+    
+
+```python
+x = 'H'
+y = 'h'
+are_they_equal = x == y
+#print(are_they_equal) --> False
+```
+
+* You can access an individual character in a string by referencing the character's index in the string
+    
+* The index of the first letter in a string is 0.
+    
+
+```python
+x = 'Cat'
+first_letter = x[0]
+#print(first_letter) --> 'C'
+```
+
+Here are some of the most basic string operations and functions that you can use in Python.
+
+```python
+# Creating strings
+string1 = "Hello" #double quotes
+string2 = 'World' #single quotes
+
+#concatenation
+concatenated_string = string1 + string2
+#print(concatenated_string) --> 'HelloWorld'
+
+#length of a string
+length = len(string1)
+#print(length) --> 5
+
+#accessing characters in a string
+first_char = string1[0]
+#print(first_char) --> 'H'
+
+#slicing a string
+substring = string1[1:4] #from 1st index up until 4th index of string
+#print(substring) --> 'ell'
+
+#repeating a string
+repeated_string = string1 * 3
+#print(repeated_string) --> 'HelloHelloHello'
+
+#converting to uppercase
+uppercase_string = string1.upper()
+#print(uppercase_string) --> 'HELLO'
+
+# Converting to lowercase
+lowercase_string = string1.lower()
+#print(lowercase_string) --> 'hello'
+```
+
+---
+
+## IV. Ordered sequence data types
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1695711373641/e98e6fcf-aad7-4dba-aa31-4d002e667578.png align="center")
+
+[*Free Notes 3D Illustration*](https://iconscout.com/3ds/notes) *by* [*iqonic.design*](https://iconscout.com/contributors/iqonic-design) *on* [*IconScout*](https://iconscout.com)*.*
+
+Sequence data types are objects that can be used to store sequences of numbers, strings, and other data types.
+
+In sequence data types, each data object within the sequence is separated by a comma, and each sequence data type is declared using different symbols.
+
+### a) Lists
+
+Lists are objects that can store and manipulate data. Since we can change/mutate the data inside of a list, we say that lists are *mutable* data types.
+
+Some important things to know/remember about lists:
+
+* Similar to strings, the index of the first element in a list is 0.
+    
+* Lists are declared using square braces \[\].
+    
+* Lists can store lists (these are called sublists).
+    
+* You can iterate through lists either from the first index (starting at 0 and iterating by 1) or from the last index (starting at -1 and iterating by -1).
+    
+
+```python
+# Creating a list
+my_list = [1, 2, 3, 4, 5, [6, 7, 8]]
+
+#accessing elements by ascending order
+first_element = my_list[0]
+#print(first_element) --> 1
+
+#accessing elements by descending order
+last_element = my_list[-1]
+#print(last_element) --> [6, 7, 8]
+
+#accessing elements within sublists
+last_element_in_sublist = my_list[-1][2]
+#print(last_element_in_sublist) --> 8
+
+#modifying elements by index
+my_list[1] = 7
+#print(my_list) --> [1, 7, 3, 4, 5, [6, 7, 8]]
+
+#adding elements to end of list
+my_list.append(6) 
+#print(my_list) --> [1, 7, 3, 4, 5, [6, 7, 8], 6]
+
+#adding elements to specific index of list
+my_list.insert(2, 8) #inserts the integer 8 at index 2
+#print(my_list) --> [1, 7, 8, 3, 4, 5, [6, 7, 8], 6]
+
+#removing elements by value
+my_list.remove(8) #removes the integer 8
+#print(my_list) --> [1, 7, 3, 4, 5, [6, 7, 8], 6]
+
+#removing elements by index
+del my_list[0] #removes element at index 0
+#print(my_list) --> [7, 3, 4, 5, [6, 7, 8], 6]
+
+#removing last element in a list
+#this method also returns the last element
+last_element_removed = my_list.pop()
+#print(last_element_removed) --> 6
+#print(my_list) --> [7, 3, 4, 5, [6, 7, 8]]
+
+#slicing a list
+sub_list = my_list[1:4]
+#print(sub_list) --> [3, 4, 5]
+
+#list length
+list_length = len(my_list)
+#print(list_length) --> 5
+
+#arrange list from least to greatest
+#since there's a sublist stored in our list, this will return an error
+#so let's first remove the sublist
+my_list.pop()
+my_list.sort()
+#print(my_list) --> [3, 4, 5, 7]
+
+#arrange list from greatest to least
+my_list.sort(reverse=True)
+#print(my_list) --> [7, 5, 4, 3]
+
+#reverse order of elements
+my_list.reverse()
+#print(my_list) --> [3, 4, 5, 7]
+
+#return number of occurences of element in list
+count_of_7 = my_list.count(7)
+#print(count_of_7) --> 1
+
+#return index of FIRST occurence of element
+index_of_7 = my_list.index(7)
+#print(index_of_7) --> 3
+
+#delete all the elements inside a list
+my_list.clear()
+#print(my_list) --> []
+
+#concatenating two lists
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+concatenated_list = list1 + list2
+#print(concatenated_list) --> [1, 2, 3, 4, 5, 6]
+
+#repeating a list
+repeated_list = list1 * 3
+#print(repeated_list) --> [1, 2, 3, 1, 2, 3, 1, 2, 3]
+```
+
+### b) Tuples
+
+The biggest difference between tuples and lists is that tuples are *immutable*.
+
+This means that after a tuple is made, there's not anything we can do to modify/mutate the data inside a tuple like we can with lists.
+
+While this might seem like a large disadvantage at first, tuples serve a unique purpose of storing data that is not meant to ever change.
+
+For example, if you wanted to store the RGB value for pure red, you should use a tuple since the RGB value for pure red is a value that remains constant.
+
+Other than the fact that tuples are immutable and are declared using parentheses instead of square braces, tuples and lists are pretty similar.
+
+```python
+# Creating a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+#accessing elements in a tuple
+first_element = my_tuple[0]
+#print(first_element) --> 1
+
+#tuple slicing
+sub_tuple = my_tuple[1:4]
+#print(sub_tuple) --> (2, 3, 4)
+
+#length of a tuple
+length = len(my_tuple)
+#print(length) --> 5
+
+#counting occurrences of an element in a tuple
+count_of_3 = my_tuple.count(3)
+#print(count_of_3) --> 1
+
+#return index of FIRST occurence of element
+index_of_4 = my_tuple.index(4)
+#print(index_of_4) --> 3
+
+#concatenating two tuples
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+concatenated_tuple = tuple1 + tuple2
+#print(concatenated_tuple) --> (1, 2, 3, 4, 5, 6)
+
+#repeating a tuple
+repeated_tuple = tuple1 * 3
+#print(repeated_tuple) --> (1, 2, 3, 1, 2, 3, 1, 2, 3)
+```
+
+---
+
+## V. Unordered sequence data types
+
+Unordered sequences are sequences of data objects that have no specified index.
+
+The key reason for this is that unordered sequence data types don't allocate any memory to the order in which elements are added to the sequence. This makes unordered sequence data types much faster to work with in terms of computing power.
+
+### a) Sets
+
+Similar to lists, sets are mutable, so you can modify/mutate the elements inside sets.
+
+Although, unlike both lists and tuples, sets don't have repeat values.
+
+While you won't get an error for trying to declare a set with repeat values, Python will simply ignore the repeat values you entered when storing the set in memory.
+
+```python
+# Creating sets
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+#adding unique element to a set
+set1.add(5)
+#print(set1) --> {1, 2, 3, 4, 5}
+
+#adding repeat element to a set
+set1.add(2)
+#print(set1) --> {1, 2, 3, 4, 5}
+
+#removing an element from a set
+set1.remove(1)
+#print(set1) --> {2, 3, 4, 5}
+
+#union of sets
+#union is all the elements from two sets (without repeating elements)
+union_set = set1.union(set2)
+#print(union_set) --> {2, 3, 4, 5, 6}
+
+#intersection of sets
+#intersection is all the shared elements from two sets
+intersection_set = set1.intersection(set2)
+#print(intersection_set) --> {3, 4, 5}
+
+#difference of sets
+#difference is all the elements in the first set but not in the second set
+difference_set = set1.difference(set2)
+#print(difference_set) --> {2}
+
+#checking if a set is a subset of another set
+#set is a subset of another set if ALL of its elements are contained in the other set
+#for example, the set of integers is a subset of the set of rational numers
+is_subset = set1.issubset(set2)
+#print(is_subset) --> False
+
+#checking if a set is a superset of another set
+#set is a superset of another set if ALL of the elements from the other set are contained in the first set
+#for example, the set of real numbers is a superset of the set of the irrational numbers
+is_superset = set1.issuperset(set2)
+#print(is_superset) --> False
+
+#checking if two sets are disjoint (no common elements)
+are_disjoint = set1.isdisjoint(set2)
+#print(are_disjoint) --> False
+```
+
+---
+
+## VI. Mapping data types
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1695712112041/19cc539c-2944-48b5-86db-1af22116c9da.png align="center")
+
+[*Free Key Folder 3d Icon*](https://iconscout.com/3ds/key-folder) *by* [*Rizki Ahmad Fauzi*](https://iconscout.com/contributors/rizkiahmadfauzi28)
+
+The last basic data type to go over in Python is the mapping data type.
+
+Mapping data types map/connect one data object with another data object stored as a pair of data.
+
+Similar to sequences of data, mapping data types can store comma-separated collections of data. However, unlike the sequence data types, the collection of data in mapping data types is pairs of data objects.
+
+### a) Dictionaries
+
+Similar to lists and tuples, dictionaries are ordered collections of data. However, this is only the case as of Python 3.7. For Python 3.6 and earlier, dictionaries are unordered.
+
+Also, similar to lists and sets, dictionaries are mutable.
+
+Finally, similar to sets, the first data object (simply referred to as *keys*) of a pair in a dictionary can't be repeated. However, the second data object (simply referred to as *values*) of a pair in a dictionary **can** be repeated.
+
+Dictionary keys can either be numbers or strings, and dictionary values can be of any data type (dictionary values can even be dictionaries).
+
+The most practical way to look at dictionaries is to see them as data objects for storing attributes of one or more things.
+
+```python
+# Creating a dictionary
+my_dog = {'breed': 'husky', 'color': 'grey', 'age': 2}
+
+#accessing a value using a key
+breed = my_dog['breed']
+#print(breed) --> 'husky'
+
+#adding a new key-value pair
+my_dog['name'] = 'max'
+#print(my_dog) --> {'breed': 'husky', 'color': 'grey', 'age': 2, 'name': 'max'}
+
+#updating a value
+my_dog['age'] = 3
+#print(my_dog) --> {'breed': 'husky', 'color': 'grey', 'age': 3, 'name': 'max'}
+
+#removing a key-value pair
+del my_dog['color']
+#print(my_dog) --> {'breed': 'husky', 'age': 3, 'name': 'max'}
+
+#checking if a key is in the dictionary
+name_exists = 'name' in my_dog
+#print(name_exists) --> True
+
+#getting all keys
+keys = my_dog.keys()
+#print(keys) --> dict_keys(['breed', 'age', 'name'])
+
+#getting all values
+values = my_dog.values()
+#print(values) --> dict_values(['husky', 3, 'max'])
+```
+
+---
+
+## VII. Conclusion
+
+I hope that after reading this article, you now feel comfortable with some of the basic operations and functions that can be applied to many of the built-in data types in Python.
+
+You have learned the basics of booleans, integers, floats, complex numbers, strings, lists, tuples, sets, and dictionaries in Python, and got exposed to the syntactical rules and logic governing these data types in Python.
+
+If you have any lingering questions that you'd like me to answer, please ask away in the comments below.
+
+Additionally, if you have any suggestions for an article topic you'd like me to cover in the future, feel free to drop those in the comments below as well.
+
+Finally, make sure to follow my newsletter so that you never miss out on when I post new content!
