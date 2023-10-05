@@ -1,0 +1,472 @@
+---
+title: "Introduction to Binary and Hex in Computer Science"
+seoTitle: "Binary & Hex Basics in Computer Science"
+seoDescription: "Master binary and hexadecimal conversions with both signed/unsigned integers, and their computer science applications with this all-inclusive guide"
+datePublished: Thu Oct 05 2023 15:36:00 GMT+0000 (Coordinated Universal Time)
+cuid: clndcathw000908mg8qkl288g
+slug: introduction-to-binary-and-hex-in-computer-science
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1696020867764/ddf4e307-3fef-411f-9fd9-dd01e8a46576.jpeg
+tags: data, binary, computer-engineering, hexadecimal
+
+---
+
+*Disclosure: When you purchase through links on my site, I may earn an affiliate commission. As an Amazon Associate, I earn from qualifying purchases.* [Read the full disclosure](https://scrappedscript.com/disclaimers)
+
+> In this article, you will learn about the binary and hexadecimal number systems, their importance in computer science, and how to convert between decimal, binary, and hexadecimal representations. You will also explore signed and unsigned integers, their conversion between different number systems, and their applications in computing. Additionally, this article includes helpful resources for further understanding these concepts and their practical use in computer science.
+
+---
+
+# Introduction
+
+![a woman writing on a whiteboard with a marker](https://images.unsplash.com/photo-1596496181871-9681eacf9764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1486&q=80 align="center")
+
+**This article is part of a series called "**[**Log Base Two**](https://scrappedscript.com/series/log-base-two)**", a series dedicated to the relationship between math and computer science**.
+
+Just to give a bit of background on my experience in math, I've **excelled** in a total of 10 college courses in math:
+
+1. **Single-variable differential calculus**
+    
+2. **Single-variable integral calculus**
+    
+3. **Multi-variable differential and integral calculus**
+    
+4. **Multi-variable differential and integral calculus of vector-valued functions**
+    
+5. **Linear Algebra**
+    
+6. **Differential equations**
+    
+7. **Probability and statistics**
+    
+8. **Data analysis using R programming language**
+    
+9. **Multivariate statistics**
+    
+10. **Discrete math**
+    
+
+For a large majority of those 10 classes, I ended up with A's.
+
+Although, before college, I struggled a lot with math in the classroom, even though math had always been my favorite subject since I was in elementary school. I found it hard to truly grasp the concepts taught because my high school teachers were too focused on skill assessment. Instead of focusing on the actual concept being taught, I was too worried about how I was going to pass the test the following week.
+
+Once I got to college, I realized that your math grade (or any grade for that matter) truly doesn't define your potential. Further, I'd argue that your success in math *education* is heavily influenced by the quality of the teacher/professor's teaching.
+
+My mission with this series is to show other people that math isn't so scary if you break down mathematical concepts into digestible bouts of information and investigate use cases of math in your primary field of interest (in this case, computer science). Along the way, I hope to also supplement your math education with quality content. I believe that **everyone** is capable of learning and truly loving mathematics.
+
+**New articles in this series are posted every Thursday!**
+
+---
+
+## Amazon Prime Free Trial
+
+[![a person holding a box with the amazon prime logo on it](https://m.media-amazon.com/images/G/01/pvc/PV1.jpeg align="center")](https://amzn.to/3tfl50P)
+
+**Free 30-day trial for Amazon Prime:** [https://amzn.to/458RWS5](https://amzn.to/458RWS5)
+
+[![a woman holding a box with amazon prime on it](https://cdn.hashnode.com/res/hashnode/image/upload/v1696024499520/2a95658c-353a-4083-afba-1b1bc89b358f.jpeg align="center")](https://amzn.to/48BdnOu)
+
+*For college students*; **Free 6-month trial for Amazon Prime Student**: [https://amzn.to/3RGaKVD](https://amzn.to/3RGaKVD)
+
+---
+
+## I. What is binary and hexadecimal?
+
+![a black and white image of 0s and 1s on a white background](https://cdn.hashnode.com/res/hashnode/image/upload/v1696024818690/bd99ab45-efea-49f2-a47c-16b0be1489c7.png align="center")
+
+Our standard number system is the decimal system. The decimal system is **base-10**, meaning that every number in the decimal system is made from **10 possible digits** (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).
+
+The binary system and hexadecimal system are simply different number systems for counting and representing numbers.
+
+Instead of base-10, the binary system is **base-2**, meaning that every number in the binary system is made from **2 possible digits** (0, 1).
+
+On the other hand, the hexadecimal system is **base-16**, meaning that every number in the hexadecimal system is made from **16 possible digits** (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F).
+
+### a) Importance of binary and hex in computer science
+
+At the hardware level, computers use the binary system to represent data. Every single piece of data on a computer is encoded in binary including numbers, strings of text, images, and much more.
+
+The reasoning behind the binary system being used to represent data in the CPU and RAM is to have a logical method of encoding information based on electrical signals.
+
+The flow of electricity in a circuit has *two* possible states: flowing or not flowing. Think about a simple circuit for a light bulb; electricity is either flowing to the light bulb or it's not, thus the light is either on or it's off.
+
+As you'll see in a bit, binary representations of data can become very lengthy due to the limited digit nature of binary. To compensate for this, the hexadecimal system is used to encode binary to make it easier for humans to work with large binary values.
+
+---
+
+## II. Binary system
+
+![a close up of a computer circuit board](https://images.unsplash.com/photo-1555589228-135c25ae8cf5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 align="center")
+
+One of the most important facts to consider in binary is that you start counting from 0.
+
+The funny thing is that technically, the decimal system works the same way. Although, it's just not intuitive for humans to start counting from 0.
+
+This is simply proven by the fact that the number 10 itself is represented with 2 distinct digits. The only way to count all the digits in the decimal system is to start at 0 and end at 9.
+
+### a) Base-2 numeral system
+
+One of the fundamental questions you might be asking is how you're supposed to count in binary.
+
+And this question is completely valid. Since we have 10 fingers, it's subjectively very intuitive to count in the decimal system.
+
+If you see a pile of 3 apples and start counting the apples by hand, you'd probably start with your index finger, then your middle finger, followed by your ring finger.
+
+But what if you try counting a pile of 11 apples by hand? Luckily, we have a computer in our head that has memory, so we could simply count all our 10 fingers, then remember that we've already counted one full set of digits, and then just start counting again with a "fresh" set of digits.
+
+More precisely, we start repeating digits. So we keep that "1" digit from the 10, and then use another "1" digit to represent 11 apples.
+
+In binary, this is the same exact process that's used to count numbers.
+
+Let's repeat the process of counting the pile of 3 apples with the binary system. Use only your index and middle finger to count, with your index finger representing the 0 digit and the middle finger representing the 1 digit.
+
+Because we start counting at 0, we count the first apple as 0 with our index finger.
+
+Next, we count the second apple by holding up both our index and middle finger (01).
+
+Now that we've run out of digits, we place that 1 at the front and start repeating digits by retreating our index and middle fingers.
+
+Finally, we count the third apple by holding up our index finger (the 0 digit), and our binary digit representation of our pile of 3 apples is **10 (no, not 10 as in "ten", but 10 as in "one zero"**.
+
+If you do a quick search on Google to convert 10 in binary to the decimal system, you'll see that it equals 2.
+
+Before you raise your pitchforks, remember what I said about how we start counting from 0 in binary, but traditionally start counting from 1 in the decimal system.
+
+The main point to remember is that when we counted those 3 apples in binary, we counted through 3 numbers: 0, 01, 10.
+
+### b) Binary digits
+
+Another word for binary digits is *bits*.
+
+In computing, a bit is considered the smallest quantity of information that can be processed or stored on a computer.
+
+And yes, these are the same bits that are measured/converted in the metric system for quantifying data storage/memory.
+
+As you may already intuitively know from maybe the storage capacity on your phone or laptop, we don't directly measure in bits, but in bytes.
+
+8 bits = 1 byte.
+
+1 gigabyte = 1,000,000,000 bytes = 8,000,000,000 bits.
+
+1 terabyte =1,000 gigabytes = 1,000,000,000,000 bytes = 8,000,000,000,000 bits!
+
+### c) Converting from decimal integers to binary digits
+
+The algorithm to convert from decimal to binary is actually very simple.
+
+The algorithm is to recursively divide the number in decimal by 2 and store (or write down if doing it by hand) the remainder after dividing, and then divide the whole number quotient by 2. This recursion stops once the quotient is 0.
+
+After you finish dividing, string together all of the remainders starting with the last remainder (this is called the *most significant bit*, or MSB) and ending with the first remainder (this is called the *least significant bit*, or LSB).
+
+Let's convert 24 in decimal to binary.
+
+| Dividend | Divisor | Quotient | Remainder |
+| --- | --- | --- | --- |
+| 24 | 2 | 12 | 0 |
+| 12 | 2 | 6 | 0 |
+| 6 | 2 | 3 | 0 |
+| 3 | 2 | 1 | 1 |
+| 1 | 2 | 0 | 1 |
+
+Since we reached a quotient of 0, we can now write out 24 in decimal to binary as **11000**.
+
+### d) Bytes and padding
+
+Typically, bit representations are grouped into 8-bit groupings (1 byte).
+
+This means that even if a number is less than 8 bits numerically, we still use 8 bits to represent the number.
+
+This is accomplished with something called *padding*. Padding is the simple process of filling up a bit grouping with leading 0s until the grouping is 8-bit.
+
+For our last example where we converted 24 to binary (**11000**), we only need 5 bits to represent 24 in binary.
+
+To represent 24 in binary as a byte, we'd thus add 3 0s to the front of **11000**.
+
+As a result, we get **0001 1000**. As a side note, it's not *necessary* to put a space in between 4 bits, but it does make it much easier to read in binary. Additionally, once we get to convert from binary to hex, you'll see why 4-bit groupings are advantageous.
+
+### e) Signed integers
+
+If our decimal number is negative, then the algorithm to convert to binary is slightly different.
+
+Since the binary system doesn't inherently have positive and negative values, negative integers in the decimal system have to be encoded using a different algorithm so that negative decimal numbers have a unique binary representation, and thus have a unique path to be stored on a computer.
+
+To convert a negative number in decimal to binary, you first convert the positive (unsigned) of that number to binary (in an 8-bit grouping representation). Once you have the unsigned (positive) binary number, you *invert* all of the bits (flip all of the 0s to 1s and vice-versa), then add 1 to the inverted, unsigned binary number. After you add 1, you now have the signed (negative) binary number.
+
+Let's convert -24 in decimal to binary.
+
+Since we already converted 24 to binary in the last example, we know that 24 is represented as **0001 1000** in binary.
+
+Our next step is to invert **0001 1000**. After inverting, we get **1110 0111**.
+
+Finally, we add 1 to the inverted binary number.
+
+$$\begin{array}{c} & 1110 & 0111 \\ + & 0000 & 0001 \\ \hline & 1110 & 1000 \\ \end{array}$$
+
+As a result, the binary representation for -24 is **1110 1000**.
+
+As a side note, if you're confused about adding numbers in binary, remember back to earlier when you counted those 3 apples in binary. When you counted the second apple and represented the second apple as 01, you then counted the third apple by adding 1 to 01 by moving that "1" digit to the left.
+
+Essentially, in binary:
+
+* 0 + 0 = 0
+    
+* 0 + 1 = 1
+    
+* 1 + 0 = 1
+    
+* 1 + 1 = 10
+    
+
+So when I added those two numbers in the last example, I started with adding 1 + 1 to get 10, which means I put a 0 and "carried" over the 1 to the next column (1 + 0). Since 1 + 1 + 0 = 10, I again put 0 and "carried" over the 1.
+
+### f) Converting from binary digits to decimal integers
+
+Now that you know how to convert from decimal to binary, let's try the reverse.
+
+To convert from unsigned binary numbers to decimal is pretty straightforward.
+
+Each binary digit represents a decimal value, starting from 0 with the LSM and sequentially increasing by 1. To find the decimal value for that binary digit, you compute the result of that binary digit multiplied by 2 raised to the power of that digit's index in the sequence of bits.
+
+Sounds very complicated in writing, but is very simple in math.
+
+Let's try converting **0001 1000** to decimal.
+
+| Binary Digit | Index of Digit | Binary Digit \* 2^Index of Digit |
+| --- | --- | --- |
+| 0 (LSM) | 0 | 0 \* 2^0 = 0 |
+| 0 | 1 | 0 \* 2^1 = 0 |
+| 0 | 2 | 0 \* 2^2 = 0 |
+| 1 | 3 | 1 \* 2^3 = 8 |
+| 1 | 4 | 1 \* 2^4 = 16 |
+| 0 | 5 | 0 \* 2^5 = 0 |
+| 0 | 6 | 0 \* 2^6 = 0 |
+| 0 (MSM) | 7 | 0 \* 2^7 = 0 |
+|  |  | Total = 24 |
+
+As a result, we see that **0001 1000** is the binary representation of 24 (which is consistent with when we converted 24 to binary).
+
+As you might've guessed, converting signed negative integers in binary to decimal is a little different.
+
+To start, you first invert the signed integer (flip the 0s to 1s and vice versa). Next, you add 1 to get the unsigned representation. Then, you convert the unsigned representation using the same algorithm in the last example. Finally, you make the resulting decimal integer negative.
+
+Let's try it on **1110** **1000**.
+
+First, we invert **1110** **1000** to **0001** **0111**.
+
+Next, we add 1.
+
+$$\begin{array}{c} & 0001 & 0111 \\ + & 0000 & 0001 \\ \hline & 0001 & 1000 \\ \end{array}$$
+
+Then, we convert the unsigned representation to decimal using the method from the last example.
+
+If you notice, **0001** **1000** is the same binary representation that we converted in the last example, and got 24.
+
+Our last step is to then make 24 negative and get -24.
+
+---
+
+## III. Hexadecimal system
+
+Since binary data can be hard to read by humans, we invented the hexadecimal system to encode binary.
+
+The hexadecimal system has 16 digits, and each digit represents a power of 16.
+
+The first 10 digits of the hexadecimal system are identical to the standard decimal system (0-9). The other 6 digits are the first 6 letters in the alphabet (A-F).
+
+| Decimal Number | Hexadecimal Digit |
+| --- | --- |
+| 0 | 0 |
+| 1 | 1 |
+| 2 | 2 |
+| 3 | 3 |
+| 4 | 4 |
+| 5 | 5 |
+| 6 | 6 |
+| 7 | 7 |
+| 8 | 8 |
+| 9 | 9 |
+| 10 | A |
+| 11 | B |
+| 12 | C |
+| 13 | D |
+| 14 | E |
+| 15 | F |
+
+Since 1 hex digit represents 4 bits, we make sure to write hex representations in pairs of 2 to get 8-bit (byte) groupings of hex digits.
+
+The process for doing so is the same as binary. We use padding by adding a leading 0 to the sequence of hex digits if the hex representation is an odd number of hex digits.
+
+### a) Converting from decimal integers to hex
+
+The process of converting from decimal to unsigned hex is the same algorithm used to convert from decimal to binary, except instead of recursively dividing by 2, we divide by 16.
+
+Let's try converting 1,932,345 to hex.
+
+| Dividend | Divisor | Quotient | Remainder |
+| --- | --- | --- | --- |
+| 1,932,345 | 16 | 120,771 | 9 |
+| 120,771 | 16 | 7,548 | 3 |
+| 7,548 | 16 | 471 | 12 |
+| 471 | 16 | 29 | 7 |
+| 29 | 16 | 1 | 13 |
+| 1 | 16 | 0 | 1 |
+
+Our string of remainders is 1 13 7 12 3 9.
+
+The next step is to convert any decimal remainder &gt; 9 to its hex digit.
+
+As a result, our unsigned hex representation is **1D7C39**.
+
+To represent a negative decimal integer in signed hexadecimal, the process is slightly different.
+
+First, find the hex representation of the positive integer.
+
+Next, subtract each digit from **F.**
+
+Finally, add 1.
+
+Let's try converting -1,932,345 to hex.
+
+From the previous example, we know the unsigned hex representation of 1,932,345 is **1D7C39**.
+
+Our next step is to subtract **F** from each digit.
+
+$$\begin{array}{c} & \text{F} \text{F} \text{F} \text{F} \text{F} \text{F} \\ - & 1 \text{D} 7 \text{C} 3 9 \\ \hline & \text{E} 2 8 3 \text{C} 6 \\ \end{array}$$
+
+Finally, add 1.
+
+$$\begin{array}{c} & \text{E} 2 8 3 \text{C} 6 \\ + & 0 0 0 0 0 1 \\ \hline & \text{E} 2 8 3 \text{C} 7 \\ \end{array}$$
+
+Therefore, the signed hex representation of -1,932,345 is **E283C7**.
+
+### b) Converting from hex to decimal integers
+
+The process of converting from unsigned hex to decimal is also the same process of converting unsigned binary to decimal, except instead of raising 2 to the power of the digit's index, we raise 16 to the power of the digit's index.
+
+Let's try converting **1D7C39** to decimal.
+
+| Hex Digit | Index of Digit | Hex Digit \* 16^Index of Digit |
+| --- | --- | --- |
+| 9 | 0 | 9 \* 16^0 = 9 |
+| 3 | 1 | 3 \* 16^1 = 48 |
+| C | 2 | 12 \* 16^2 = 3,072 |
+| 7 | 3 | 7 \* 16^3 = 28,672 |
+| D | 4 | 13 \* 16^4 = 851,968 |
+| 1 | 5 | 1 \* 16^5 = 1,048,576 |
+|  |  | Total = 1,932,345 |
+
+We end up getting that **1D7C39** is the hex representation for 1,932,345 (which is consistent with the example where we converted 1,932,345 to hex).
+
+If you want to convert a signed hex value to decimal, you start by subtracting each digit from **F**.
+
+Next, you add 1 to the result to get the unsigned representation.
+
+Then, you convert the unsigned representation to decimal using the same algorithm used in the last example.
+
+Finally, make the decimal value negative.
+
+Let's try converting the signed hex representation of **E283C7** to decimal.
+
+First, we'll subtract each digit from **F**.
+
+$$\begin{array}{c} & \text{F} \text{F} \text{F} \text{F} \text{F} \text{F} \\ - & \text{E} 2 8 3 \text{C} 7 \\ \hline & 1 \text{D} 7 \text{C} 3 8 \\ \end{array}$$
+
+Next, we'll add 1 to get the unsigned hex representation.
+
+$$\begin{array}{c} & 1 \text{D} 7 \text{C} 3 8 \\ + & 0 0 0 0 0 1 \\ \hline & 1 \text{D} 7 \text{C} 3 9 \\ \end{array}$$
+
+We already converted **1D7C39** to decimal in the last example to 1,932,345.
+
+Therefore, we find that the signed hex representation of **E283C7** is -1,932,345 in decimal.
+
+### c) Converting from binary to hex
+
+Converting from binary to hex is incredibly simple.
+
+Let's do a bit of some combinatorics to find out how many unique combinations of 4-bit groupings there are.
+
+First, for each digit in a 4-bit grouping, we have 2 choices (0 or 1).
+
+$$\binom{2}{1} = \frac {2!} {1!(2-1)!} = \frac {2} {1} = 2$$
+
+Second, to find the total amount of 4-bit combinations we can make, we take 2 raised to the power of 4 (since we have 4 digits in a group).
+
+$$2^4 = 16$$
+
+Therefore, we can make 16 possible 4-bit combinations.
+
+Wait a minute, hexadecimal is base-16! :O
+
+That's right, hexadecimal's design was no mistake; the inventors of hexadecimal not only wanted to simplify data representation for humans but also to conveniently be able to encode every single 4-bit grouping into a unique hex digit.
+
+Here's a table showing every possible 4-bit combination encoded into a single, unique hex digit.
+
+| 4-bit Binary | Hexadecimal Digit |
+| --- | --- |
+| 0000 | 0 |
+| 0001 | 1 |
+| 0010 | 2 |
+| 0011 | 3 |
+| 0100 | 4 |
+| 0101 | 5 |
+| 0110 | 6 |
+| 0111 | 7 |
+| 1000 | 8 |
+| 1001 | 9 |
+| 1010 | A |
+| 1011 | B |
+| 1100 | C |
+| 1101 | D |
+| 1110 | E |
+| 1111 | F |
+
+Let's try converting **1010 1110 0010 1111 0001 1000** to hexadecimal.
+
+Using the table above, we find that the hexadecimal representation is **AE2F18**.
+
+Simple, right?
+
+### d) Converting from hex to binary
+
+Converting from hex to binary is the same process as converting binary to hex.
+
+Except, instead of using the table to match a 4-bit grouping to a hex digit, you match a hex digit with a 4-bit grouping ;)
+
+---
+
+## IV. Conclusion
+
+In this article, you've learned about 2 different number systems (binary and hexadecimal) and how/why they're used in computing. Additionally, you've learned how to convert between decimal &lt;--&gt; binary, hexadecimal &lt;--&gt; binary, and decimal &lt;--&gt; hexadecimal.
+
+I remember when I was brand new to the world of computer science, I was very confused about why the binary system was used, and why it was necessary to use hexadecimal. So I hope that I've explained binary and hex well enough to anyone new to computer science so that you don't have to be confused like I was at first.
+
+I've also linked to some great resources below that I recommend checking out if you want to learn more about binary and hex.
+
+If you have any lingering questions or suggestions for a topic you want me to cover in the future, then please make sure to leave a comment down below.
+
+Lastly, make sure to follow my newsletter to never miss out on when I post new content!
+
+---
+
+## V. Additional resources
+
+### a) Amazon Prime Free Trial
+
+[![a person holding a box with the amazon prime logo on it](https://m.media-amazon.com/images/G/01/pvc/PV1.jpeg align="center")](https://amzn.to/3rDmDkz)
+
+**Free 30-day trial for Amazon Prime:** [https://amzn.to/45a0ick](https://amzn.to/45a0ick)
+
+[![a woman holding a box with amazon prime on it](https://cdn.hashnode.com/res/hashnode/image/upload/v1696051026485/dee0034b-2580-45a5-9ae5-7a51c5e06360.jpeg align="center")](https://amzn.to/3RJt40b)
+
+*For college students*; **Free 6-month trial for Amazon Prime Student**: [https://amzn.to/456TDQ9](https://amzn.to/456TDQ9)
+
+### b) Videos
+
+%[https://www.youtube.com/watch?v=X8jsijhllIA] 
+
+### c) Articles
+
+* [What is binary and how is it used in computing?](https://www.techtarget.com/whatis/definition/binary)
+    
+* [Binary Addition](https://byjus.com/maths/binary-addition/)
+    
+* [The Hexadecimal Number System Explained](https://www.freecodecamp.org/news/hexadecimal-number-system/)
