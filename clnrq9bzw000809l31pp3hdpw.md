@@ -1,0 +1,427 @@
+---
+title: "Improve Your eCommerce Site's Ranking with On-Page SEO Tools and Methods"
+seoTitle: "Boost eCommerce SERP Ranking With On-Page SEO"
+seoDescription: "Improve eCommerce search engine ranking using on-page SEO: optimize keywords, images, speed, mobile experience with the help of free SEO tools"
+datePublished: Sun Oct 15 2023 17:15:31 GMT+0000 (Coordinated Universal Time)
+cuid: clnrq9bzw000809l31pp3hdpw
+slug: improve-your-ecommerce-sites-ranking-with-on-page-seo-tools-and-methods
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/qwtCeJ5cLYs/upload/4651c2e3052d318ae1a74250cfd4c0de.jpeg
+tags: ecommerce, seo, shopify
+
+---
+
+*Disclosure: When you purchase through links on my site, I may earn an affiliate commission. As a Shopify Partner, I earn from qualifying sales.* [**Read the full disclosure**](https://scrappedscript.com/disclaimers)
+
+> In this article, we cover the importance of on-page SEO for e-commerce sites and how to improve your website's search engine ranking using SEO keywords, optimizing images, improving site speed, and mobile optimization. We also discuss various SEO tools and resources, such as Shopify Admin, Google Analytics, Google Search Console, and Ahrefs, to help you implement and analyze your SEO strategy effectively. By staying updated on SEO trends and adjusting your strategies accordingly, you can ensure the success and growth of your e-commerce business.
+
+---
+
+# Introduction
+
+[![a green shopping bag with the word shopify on it](https://cdn.hashnode.com/res/hashnode/image/upload/v1695000174475/57560163-17db-406f-9648-f74b7bfe803f.png?auto=compress,format&format=webp&auto=compress,format&format=webp align="center")](https://shopify.pxf.io/c/4786087/1101159/13624)
+
+This article is part of a series called [Cache In Cash Out](https://scrappedscript.com/series/cache-in-cash-out), a series where I help educate and inform established businesses, aspiring entrepreneurs, and independent developers about Shopify.
+
+Shopify powers millions of businesses and is trusted by brands such as Unilever, Kylie Cosmetics, Allbirds, and many more.
+
+As someone who values freedom through entrepreneurship, I love how [Shopify's Mission](http://shopify.pxf.io/5g1zrD) is to reduce the barriers to becoming a business owner by providing a platform that makes it easier to launch and grow a business.
+
+No matter where you are on your journey, Shopify fosters a culture that empowers individuals who are seeking independence in the form of starting their own business.
+
+**New articles in this series are posted every Sunday!**
+
+---
+
+## [Sign up for your free trial of Shopify](https://shopify.pxf.io/c/4786087/1101159/13624)
+
+[![a yellow box with the words shopify on it](https://cdn.hashnode.com/res/hashnode/image/upload/v1696104511342/568fb48b-12ac-424e-90f5-39b4912c10d4.png?auto=compress,format&format=webp align="center")](https://shopify.pxf.io/c/4786087/1101159/13624)
+
+---
+
+## I. Importance of SEO for eCommerce sites
+
+In the most basic sense, SEO (search engine optimization) is the practice of increasing a website page's index in a search engine such as Google, Bing, etc.
+
+When you submit a search on a search engine like Google, there's a lot of data and algorithms behind the scenes to serve you, the searcher, the most relevant web results for your one search term/phrase.
+
+Unless you pay for ads on a search engine, (almost) every page on your website is given a rank for various search terms/phrases.
+
+Fortunately, there are steps you can take to increase, or optimize, this ranking so that your e-commerce site can organically reach the eyes of tons of people without paying a dime for ads.
+
+When it comes to digital marketing, SEO is an extremely effective form of promoting your brand and business. If your business sells products or services online through an e-commerce site, then the benefits of SEO weigh even greater.
+
+When done correctly, SEO offers many benefits including:
+
+* improving the quality and quantity of your website's visitors
+    
+* increasing brand awareness
+    
+* attracting local customers
+    
+* building your business's credibility
+    
+
+SEO might sound super complicated and time-consuming at first, but the practice of SEO follows a clear structure similar to any other marketing strategy.
+
+Additionally, there are many online SEO tools to help you with every step of the process from research to execution.
+
+I'm going to cover everything you need to know to start incorporating on-page SEO practices on your e-commerce site including initial keyword research, details on all of the methods and strategies implemented as part of on-page SEO, and some online SEO tools and resources that I recommend to ease the whole process.
+
+---
+
+## II. Keyword research
+
+![hand typing on a keyboard](https://images.unsplash.com/photo-1598624443973-2aa79a646a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 align="center")
+
+At the heart of SEO are keywords. Keywords are exactly what they sound like. These are the words and phrases that people search for the most on search engines.
+
+While keywords might seem intuitive, choosing the right keywords is crucial to not only ranking for keywords relevant to your website but also to ensuring that you reach the right audience.
+
+### a) Identifying target keywords
+
+One of the best free tools to research keywords is Google's Keyword Planner tool (a tool included with a free Google Ads account).
+
+On Google's Keyword Planner, you start by entering 1-10 keywords/phrases that you want to view search data for. Additionally, you directly can paste your URL so that Google can crawl your website and offer better suggestions based on the content that already exists on your website.
+
+When choosing your keywords, it's best to stick to meaningful phrases as opposed to single words. Additionally, branch out the variety of the words in your phrases so that you get the most relevant results possible.
+
+After you submit your keywords/phrases, Google's Keyword Planner returns a table with rows for each keyword you entered as well as rows for relevant keywords that Google recommends.
+
+The most important data points to look at in each row are:
+
+* the keyword
+    
+    * this is the exact keyword/phrase that you'd want to use on your website
+        
+    * pay attention to the quality of the keyword's grammar
+        
+* the average monthly amount of searches for that keyword
+    
+    * this is the average from the past 12 months
+        
+    * generally, it's best to stick with keywords that have an average monthly search amount greater than 1,000 searches.
+        
+* the level of competition for that keyword
+    
+    * the level of competition is graded as being high, medium, or low
+        
+    * even though this is determined by the number of advertisers bidding on that keyword and not directly the competition for organic SEO, this is a good way to see how popular a keyword is for other websites
+        
+    * generally, it's best to stick with keywords that have low competition
+        
+    * by choosing keywords with a high average monthly amount of searches and low competition, you're choosing keywords that are generally more popular amongst your potential audience/customers but less popular amongst your competitors
+        
+* the range of costs for CPC bidding for that keyword
+    
+    * while I'm covering organic SEO in this article, this is still a good data point to look at, especially if you ever plan on paying for search engine ads
+        
+
+As you're sifting through the data, try to choose a good handful of keywords that you feel are representative enough for your website.
+
+Now that you have your keywords, let's move on to covering how you can effectively use those keywords on your website.
+
+---
+
+## III. On-Page SEO
+
+![html closing tag](https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80 align="center")
+
+Typically, when people are referring to SEO, they're referring to the marketing strategies that are directly related to a website's content and source code.
+
+This is called on-page SEO and is the most direct method to effectively influence the indexing of your website on search engines.
+
+On-page SEO includes all of the strategies and methods that are implemented on the front end of your website and visible to all of your website visitors.
+
+### a) Title tags and meta tags
+
+Title tags and meta tags are types of HTML tags.
+
+In the context of on-page SEO, title tags and meta tags help search engines understand the main topic of the page, and they are displayed as snippets in search engine results pages (SERPs).
+
+The title tag for a webpage is the text that's displayed in the tab bar on a web browser. Additionally, the title tag is what Google displays as the title for your webpage when it shows up as a search result. Most importantly, the title tag is one piece of information that Google uses to determine your webpage's relevance and search engine ranking for different keywords.
+
+The meta tag, also referred to as the meta description, is what Google uses to display a brief description of your webpage when displayed as a search result. Similar to the title tag, the meta tag is another piece of information that Google uses when determining your webpage's ranking.
+
+While the title tags and meta tags are two places to put keywords, it's important to not just strictly focus on SEO when choosing your title and meta description. Keep in mind that part of your overall digital marketing strategy should be to appeal to people that you want to come to your website. This means don't use misleading titles and meta descriptions, don't make the text sound robotic, and structure the text as if you were on the other side as a visitor to your own business's website.
+
+When you're casually looking through Google search results, chances are you probably judge a website before you even visit it by reading its title and description. Even if the result is ranked high for whatever you searched, you may be dissuaded from visiting the website just based on its title and description alone.
+
+Finally, if this seems hard to implement, it's very easy to edit your title and meta description without even touching any HTML code depending on the platform you're using to build your website.
+
+Further down in this article, I'm going to cover various SEO tools including how to edit your title and meta description if you're building your e-commerce website with Shopify.
+
+### b) Header tags (H1, H2, H3)
+
+Header tags, such as H1, H2, and H3, are also HTML tags just like title tags and meta tags.
+
+As their name implies, header tags are different levels of heading. H1 is the header tag with the largest font size, followed by H2, then H3. Regardless of the header level, all header tags are bold by default.
+
+If you want a quick example of a header tag, the text that begins this section, "**Header tags (H1, H2, H3)**", is an H3 tag.
+
+From a design point of view, header tags allow you to structure the hierarchy of your webpage's content.
+
+From an SEO point of view, header tags help search engines understand your web page's organization and the main topics of your webpage's content. For this reason, header tags are another spot to include SEO keywords to boost your website's search engine ranking.
+
+One big debate in the realm of SEO is whether a webpage should have multiple H1 tags. Some say that it hurts your website's search engine ranking, and others say that it's just a myth and nothing to worry about.
+
+Regardless of the SEO debate, it is generally bad practice to put multiple H1 tags on a webpage from a web development perspective. Multiple H1 tags affect your website's accessibility and generally hurt your website's user design.
+
+Aside from all that though, similar to what I mentioned for title tags and meta descriptions, make sure to not solely focus on SEO when writing your header tags.
+
+### c) Image optimization and alt text
+
+Including images on a webpage is the perfect example of playing a balancing act.
+
+No matter which way you tip the scale, your webpage will suffer in terms of SEO, accessibility, page load speed, bounce rate, and user interface design. From a broad business point of view, bad practices in webpage images can also hurt your brand image, credibility, and a product's marketability.
+
+Although, if you play the balancing act just right, you can expect fantastic results in all or most of these areas.
+
+The key factors you need to pay attention to when putting images on your website include:
+
+* alt text
+    
+    * alt text is an HTML attribute included in an HTML image tag
+        
+    * traditionally, this text is hidden from most users unless a website fails to load an image, in which case, the alt text is displayed in the same spot that the image would be
+        
+    * this text is very important for accessibility since alt text is the text that's read aloud to those who are visually impaired and use a screen reader
+        
+    * additionally, this text affects SEO as it's the text that search engines use to determine the image's content and hence the image's ranking for a search engine's photo search result page
+        
+    * since alt text directly impacts SEO, this is another place to put optimized keywords; although, please keep in mind that those who use screen readers rely on alt text to navigate a webpage, so don't spam keywords in the alt text just for the sake of it
+        
+* the image's file name
+    
+    * believe it or not, an image's file name is another piece of information that search engines use to index a website's images
+        
+    * make sure to name the file something concise and relevant to the image
+        
+* the image's file size
+    
+    * if your image is too heavy in terms of data, this will drastically increase your webpage's load speed
+        
+    * try to keep images below 1 MB to optimize your site's load speed
+        
+    * alternatively, consider using a content delivery network (CDN) to load images on your website as opposed to local files stored on your website's directory; CDNs drastically improve an image's loading speed
+        
+    * keep in mind that website visitors typically don't like waiting for a website to load, so your image's file size can negatively impact your website's bounce rate
+        
+* image quantity
+    
+    * to optimize your overall webpage's load speed, you should not include too many images for the obvious fact that you're increasing the amount of data that has to load on the website
+        
+    * additionally, too many images can hurt the user interface design and make your webpage feel too flooded
+        
+    * on the flip side, no images or too few images can make your webpage feel too bland and make it harder for potential customers to choose to buy from your website
+        
+* image quality
+    
+    * low-resolution images should be avoided as much as possible, especially for product images
+        
+    * in addition to resolution, an image should also be high quality from a general photography point of view; you want your images to feature good lighting, good angles, and good editing
+        
+    * poor image quality negatively affects the overall user interface design, but it can also negatively affect a product's marketability if using a product image
+        
+
+While it might seem overwhelming to try to balance all of those factors when putting images on your e-commerce site, there are many tools and resources available to help with image optimization. As I stated earlier, I'm going to cover some example resources further below.
+
+### d) Product descriptions
+
+For e-commerce websites, product descriptions are one of the most important areas on your website to include your SEO keywords.
+
+Although, make sure that you're not sacrificing readability and unique product marketability for SEO keywords.
+
+I like to think of SEO keywords like salt and pepper. Salt and pepper are included in almost everything you eat as a way to easily add some basic and familiar flavoring. However, if you put too much salt and pepper or don't mix in the salt and pepper evenly, then it can ruin the entire meal.
+
+If you appropriately use SEO keywords in your product descriptions, then you'll not only improve the product pages' search engine rankings, but you'll also make engaging and informational product descriptions that will make visitors more likely to purchase your products.
+
+### e) URL structure
+
+The piece of a URL that affects your web page's SEO is called the URL slug.
+
+The URL slug is the part of the URL that comes directly after your website's domain name. For example, the URL slug for this article is "**/improve-your-ecommerce-sites-ranking-with-on-page-seo-tools-and-methods**".
+
+In terms of the structure, make sure to separate each word with a hyphen. While underscores *can* be used to separate words in the URL slug, I strongly advise that you use hyphens instead of underscores. Not only do hyphens look more visually appealing, but also Google recommends using hyphens to make it easier for their web crawler to read the words in your URL slug.
+
+Since search engines use a webpage's URL slug to help determine your webpage's search engine ranking, URL slugs are another great place to contain relevant keywords.
+
+Additionally, a clean and descriptive URL slug can also increase click-through rates from search engine results pages.
+
+### f) Internal linking
+
+Internal links are links included on a webpage that link to another page on your website.
+
+When a search engine crawls your website to determine your website's search ranking, one of the things it looks for is clear and relevant internal links.
+
+For e-commerce sites, a very popular method of internal linking is to link to other product pages on your website or link to any internal webpage with content relevant to the respective product (such as blog posts or tutorials related to the product).
+
+By appropriately including internal links, you're enhancing your website's accessibility and user experience by defining a clear structure and hierarchy of your website.
+
+Additionally, proper use of internal links decreases your website's bounce rate, increases user engagement time, and increases your e-commerce site's upsell rates, hence increasing the average order value of your website's customers.
+
+With proper internal linking, you're essentially giving your website's visitors a reason to keep browsing your site.
+
+### g) Mobile Optimization
+
+Mobile optimization refers to improving a website's usability and accessibility for mobile users.
+
+Web developers use something called media queries in a CSS stylesheet to control how a website looks on various screen sizes.
+
+Since mobile optimization is implemented with CSS, this means it's part of your website's source code, hence it's very easy for web crawlers to analyze if your website is properly optimized for mobile screens.
+
+When a search engine crawls your website, proper mobile design is one of the most important factors in determining your site's ranking.
+
+Beyond just SEO, keep in mind that a large portion of ecommerce transactions happen on mobile devices, and this percentage of mobile users is expected only to increase.
+
+A [recent report](http://shopify.pxf.io/Oro6kA) estimates that about $620 billion in revenue (roughly 43% of projected total ecommerce transactions in 2024) will be from mobile ecommerce transactions next year.
+
+As a result, it's in your best interest to ensure that your site visitors and customers can navigate your website on mobile.
+
+When you choose an e-commerce platform like Shopify to build and host your e-commerce website, mobile optimization is extremely easy to implement. This is because Shopify focuses on mobile-first design, meaning that you don't have to worry about manually perfecting your website's mobile design.
+
+If you want more information on how exactly Shopify supports mobile optimization, then read my article from last week, [Meet Dawn: The Complimentary Default Theme in Shopify 2.0](https://scrappedscript.com/meet-dawn-the-complimentary-default-theme-in-shopify-20). In that article, I discuss features of Dawn, Shopify's default, free theme that is engineered with a mobile-first design approach.
+
+### h) Site speed optimization
+
+I've briefly covered the idea of site speed optimization in the context of images.
+
+Site speed is not just how fast a particular webpage loads the base HTML markup, but also how fast that webpage loads media files, and the front-end JavaScript applications that make your website functional.
+
+Additionally, site speed is impacted by how fast your website can request and receive information from your website's database server so you can display templated content on dynamic web pages.
+
+When it comes to on-page SEO, most of the site speed optimization techniques revolve around making your web pages "light". This means avoiding large data files and heavy front-end applications.
+
+However, there's another type of SEO called *technical* SEO. Technical SEO includes all of the strategies and techniques to optimize the technical "background" of your website including things like site speed optimization.
+
+Alternative to the site speed optimization techniques for on-page SEO, technical SEO techniques for improving site speed include things like browser caching, compressing images, minifying source code, "lazy loading", and optimizing your backend database infrastructure.
+
+---
+
+## IV. SEO Tools and Analytics
+
+![google analytics dashboard](https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 align="center")
+
+### a) Shopify Admin
+
+If you host your e-commerce website with Shopify, then you'll be able to make use of Shopify Admin.
+
+Shopify Admin is where you can manage and edit your website and e-commerce channels.
+
+For including SEO keywords on your website, Shopify Admin makes it easy to place SEO keywords in your title tags, meta descriptions, header tags, alt text, URL slugs, and product descriptions without having to touch any raw code. Additionally, Shopify Admin even features a tool where you can easily and quickly preview how a particular webpage will appear as a Google search result.
+
+### b) Shopify apps
+
+At the time of writing this article, there are hundreds of 3rd party SEO apps available to install on your Shopify site.
+
+Shopify has very strict rules and guidelines for 3rd party app developers to be able to publish their applications on [Shopify's app store](http://shopify.pxf.io/da32Qq). Even after a 3rd party app developer publishes their app, Shopify requires developers to continually make necessary updates to their apps and offer customer support for Shopify merchants. This is just one of the ways that Shopify supports innovation and unique solutions while still protecting the interests of Shopify merchants.
+
+There are currently a wide variety of SEO tools and solutions on the [Shopify app store](http://shopify.pxf.io/da32Qq) from making it easier to optimize your Shopify site's on-page SEO to handling some of the more technical SEO strategies like optimizing your site speed in the background.
+
+### c) Google Analytics
+
+Google Analytics is a free tool offered by Google to monitor your website's traffic and analyze your website's user behavior.
+
+You can see data points related to things such as bounce rate, user engagement time, amount of unique visitors, amount of views, audience demographics, and much more.
+
+Specific to e-commerce websites, you can see user behavior data related to carts and the checkout process, product pages, transactions, and revenue.
+
+Analyzing all of this data is not only important to view how your business is currently performing but also to see if your website is hitting the right target audience and to understand where you should make improvements to your site to ultimately improve user engagement.
+
+For example, if your bounce rate is too high, but your site's average session duration is fine, then perhaps you might need to look into improving your website's internal linking so that visitors are more likely to browse additional pages on your website.
+
+However, if your bounce rate is high, and your site's average session duration is poor, then you might need to focus on optimizing site speed. Your website may take too long to load which is causing users to become impatient and leave your website without browsing additional pages.
+
+### d) Google Search Console
+
+Google Search Console is yet another free SEO tool offered by Google.
+
+Google Search Console allows you to easily and quickly request Google to crawl your website so that your web pages can start to be indexed on Google's search engine.
+
+Additionally, Google Search Console offers data points related to the number of impressions of your pages on Google, the number of clicks to your website from Google's search results, CTR (the ratio of clicks to impressions), the search ranks of each your pages, and even insights about user experience such as site speed, accessibility, and mobile usability.
+
+While there's not a whole lot of data to analyze compared to Google Analytics, Google Search Console is a necessary tool to directly view your site's ranking and to also get direct suggestions/recommendations from Google to improve certain parts of your website that could be hindering certain webpages from being indexed.
+
+### e) Ahrefs
+
+Ahrefs is one of the most comprehensive SEO tools. Ahrehs is essentially a web crawler that crawls your entire website and even other websites that refer to your website with backlinks to gather as much data about your website as possible.
+
+Ahrefs offers deeper insights into specific SEO factors such as backlinks, organic search insights, keyword performance, internal links, error codes, accessibility, and user interface design.
+
+Beyond just providing data, Ahrefs also gives direct recommendations and suggestions to solve specific issues affecting your website's SEO.
+
+Ahrefs essentially does all the data analysis and interpretation for you so that all you have to do is take action to fix the issues with your website.
+
+While Ahrefs paid plans can be a bit pricey, they do offer a free plan that still has quite a bit of data analysis and resources available to you.
+
+---
+
+## V. Best practices
+
+![writing web page design on whiteboard](https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 align="center")
+
+### a) Staying updated with SEO trends and algorithm changes
+
+One of the biggest mistakes you can make with implementing an SEO strategy is to not stay up to date on the latest external changes to factors affecting SEO.
+
+Google is always updating its search algorithms which directly impacts the criteria for websites ranking on Google.
+
+Stay informed about changes so that you can plan accordingly. If you don't adapt to changes in Google's search algorithms, then it'll greatly hurt your website's SEO and thus hurt your business's growth.
+
+Additionally, remember to not rely on SEO as your only digital marketing strategy. It's best to use a variety of digital marketing strategies so that external factors/changes don't hurt your business's growth.
+
+For example, if you've spent time and energy on your social media marketing strategy, then even if Google drastically changes one of its search algorithms and your website suddenly ranks horribly, you'll still be getting organic traffic to your site from your business's social media channels.
+
+### b) Measuring success and adjusting strategies
+
+As with any other strategy in business, it's best to set short-term and long-term goals so that you can determine if your business is underperforming or doing well based on your expectations and effort.
+
+In the context of SEO, set overall goals for your website's search engine ranking and performance on search engine results pages.
+
+If you're not meeting your goals, then it's most likely either because you're not spending enough time and energy on SEO, or you need to take a closer look at your SEO strategy and make necessary adjustments to factors that are holding you back.
+
+Conversely, if you're meeting your goals (or even outperforming your goals), then make sure you don't stay stagnant. Remember to continually stay updated on external factors that could potentially hurt your SEO strategy. Additionally, take a broader look at how your other marketing strategies are performing. If other marketing strategies are not doing well, but your SEO strategy is outperforming your goals, then reallocate some of the time and energy you spend on SEO to other marketing strategies.
+
+---
+
+## VI. Conclusion
+
+I hope that you now have a better understanding of on-page SEO and how to start improving your e-commerce website's search engine ranking by properly using SEO keywords, optimizing images, improving site speed, and optimizing for mobile.
+
+I've left links to all of the tools and resources that I mentioned throughout this article in the section below.
+
+If you want to learn even more about how to implement SEO for e-commerce sites, then I suggest checking out this video.
+
+%[https://www.youtube.com/watch?v=7epUGFEdrP8] 
+
+Additionally, if you plan to set up your e-commerce website with Shopify, or are already using Shopify but need assistance with web development and user interface design, then feel free to [schedule a free 30-minute consultation with me](https://calendly.com/salari-insite/shopify-partner-consultation).
+
+%[https://calendly.com/salari-insite/shopify-partner-consultation] 
+
+If you have any immediate questions, then please leave a comment below and I'll make sure to respond as soon as possible.
+
+Lastly, make sure to subscribe to my newsletter so you never miss out on when I post new content!
+
+---
+
+[![a cell phone with a picture of a woman in a white dress](https://cdn.hashnode.com/res/hashnode/image/upload/v1696115247484/0e17780a-1f87-4aca-823d-07c0881e0289.png?auto=compress,format&format=webp align="center")](https://shopify.pxf.io/c/4786087/1101159/13624)
+
+---
+
+## VII. Additional resources
+
+### a) Tools
+
+* [Google Keyword Planner](https://ads.google.com/home/tools/keyword-planner/)
+    
+* [Shopify app store](http://shopify.pxf.io/LX5RdO)
+    
+* [Google Analytics](https://analytics.google.com/)
+    
+* [Google Search Console](https://search.google.com/search-console/about)
+    
+* [Ahrefs](https://ahrefs.com/)
+    
+
+### b) Articles
+
+* [Understanding Mobile Commerce: Stats and Trends](http://shopify.pxf.io/Oro6kA)
