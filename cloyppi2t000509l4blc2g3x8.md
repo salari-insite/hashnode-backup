@@ -1,0 +1,194 @@
+---
+title: "Comparing Sorting Algorithms: Bubble Sort vs Insertion Sort"
+seoDescription: "Compare Bubble Sort and Insertion Sort algorithms, analyzing steps, code, time complexity, and pros/cons to improve programming skills"
+datePublished: Tue Nov 14 2023 19:14:12 GMT+0000 (Coordinated Universal Time)
+cuid: cloyppi2t000509l4blc2g3x8
+slug: comparing-sorting-algorithms-bubble-sort-vs-insertion-sort
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/xrVDYZRGdw4/upload/b30f311a1d21c12a32f48c97262ef037.jpeg
+tags: algorithms, python, sorting-algorithms
+
+---
+
+# Introduction
+
+In this article, we will delve into two basic sorting algorithms: Bubble Sort and Insertion Sort. We will explore their steps, implementation in Python code, time complexity, advantages, and disadvantages, providing you with a comprehensive understanding of these fundamental sorting techniques.
+
+Whether you're a beginner in computer science or a seasoned programmer, this comparison will sharpen your knowledge and help you make informed decisions when choosing the right sorting algorithm for your projects.
+
+---
+
+## Bubble Sort
+
+Bubble sort works by comparing two values at a time and sorting those two values as it iterates through the entire list.
+
+You can think of it as if it's creating a bubble of the list every time it compares two consecutive values.
+
+The bubble sort algorithm passes through the list n - 1 times and iterates through 1 less element each iteration.
+
+Just from the description, you may already tell that the bubble sort algorithm is not an efficient sorting algorithm.
+
+However, bubble sort is a good algorithm for beginner software engineers to study and understand so that they grasp the foundational concepts of algorithms in general.
+
+### Algorithm Steps
+
+1. Start at the first two elements in the list
+    
+2. Compare those elements
+    
+3. Swap those elements if they're not sorted
+    
+4. Move to the next two elements and repeat steps 2 and 3
+    
+5. Repeat steps 1-4 till you reach the end of the list
+    
+6. Repeat steps 1-5 till the list is sorted
+    
+
+### Code Snippet
+
+```python
+def bubble_sort(arr):
+
+    # Iterate through list (n - 1) times
+    for i in range(len(arr) - 1):
+        
+        # Iterate through entire list first time
+        # Subsequently chop last element from iteration
+        for j in range(len(arr) - i - 1):
+            
+            # If the element before the other element is greater,
+            # swap their order
+            if arr[j] > arr[j + 1]:
+
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+# Example Usage:
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+```
+
+### Time complexity
+
+Regardless of whether the list is partially sorted, or even fully sorted, bubble sort is a very slow algorithm.
+
+This is because no matter what, you iterate through the list n - 1 times, and make 2 comparisons for each element included in each iteration.
+
+This means that the bubble sort time complexity is
+
+$$O(n^2)$$
+
+This means that we need to make n^2 comparisons for a list of length n.
+
+Bubble sort time complexity graph:
+
+<iframe src="https://www.desmos.com/calculator/eoteinxlt4?embed" width="500" height="500" style="border:1px solid #ccc"></iframe>
+
+### Advantages
+
+The main advantage of bubble sort is that it's very simple for beginner software engineers to conceptually understand and implement into code.
+
+### Disadvantages
+
+The biggest and most apparent of bubble sort is the incredible inefficiency.
+
+Since the bubble sort time complexity is so large, it's rarely used in practice.
+
+---
+
+## Insertion Sort
+
+Insertion sort is another slow sorting algorithm but is *usually* faster than bubble sort.
+
+Again, even though this algorithm is slow, it's a good algorithm to study as a beginner software engineer.
+
+Insertion sort works by dividing the list into a sorted and an unsorted section. It iterates through the unsorted section, taking one element at a time and inserting it into its correct position in the sorted section. This process continues until all elements from the unsorted section have been inserted into the sorted section in the correct order.
+
+### Algorithm Steps
+
+1. Start by pulling the second element in the list
+    
+2. Look at all the numbers to the left of the vacant spot and slide over all the values larger than the element we pulled out
+    
+3. Insert the element we pulled out into whatever spot is now vacant
+    
+4. Pull the next element out of the list
+    
+5. Repeat steps 2 and 3
+    
+6. Repeat step 4 until the entire list is sorted
+    
+
+### Code snippet
+
+```python
+def insertion_sort(arr):
+    
+    # Iterate through list starting at second element
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+        j = i - 1
+        
+        # While the next element index is valid and
+        # the current element is less than the next element
+        # being compared
+        while j >= 0 and key < arr[j]:
+            
+            # The proceeding element will become the next element
+            arr[j + 1] = arr[j]
+            j -= 1
+        
+        arr[j + 1] = key
+
+# Example usage:
+arr = [12, 11, 13, 5, 6]
+insertion_sort(arr)
+```
+
+### Time complexity
+
+The worst-case scenario for insertion sort is if the list starts in the complete reverse order.
+
+In this worst-case scenario, the insertion sort algorithm makes this amount of comparisons:
+
+$$\frac{1}{2} (n^2-n)$$
+
+Therefore, the insertion sort time complexity is:
+
+$$O(n^2)$$
+
+If you notice, the insertion sort's time complexity is the same as the bubble sort's time complexity.
+
+However, if a list is partially sorted (meaning some values are already in their correct index), then insertion sort takes less time than bubble sort.
+
+The best case scenario for insertion sort is if the list is already sorted. If the list is already sorted, then insertion sort makes 0 list comparisons. On the other hand, bubble sort's time complexity will remain n^2 even for a fully sorted list.
+
+Therefore, in practice, the insertion sort algorithm is usually much faster than the bubble sort algorithm since insertion sort will typically make fewer comparisons than bubble sort.
+
+### Advantages
+
+The biggest advantage of insertion sort is that it's typically faster than the bubble sort algorithm, and the amount of comparisons it makes is dependent on how sorted the list already is. Whereas, bubble sort's time complexity is independent of how sorted the list already is.
+
+### Disadvantages
+
+The main disadvantage of insertion sort is that it's still considered a pretty slow sorting algorithm.
+
+---
+
+## Conclusion
+
+I hope after reading this article, you now have a clearer understanding of the bubble sort and insertion sort algorithms and a more general understanding of the importance of studying algorithms in computer science.
+
+In this article, you learned about the basic concept behind both the bubble sort and insertion sort algorithms, their steps, their implementation in Python code, their time complexity, and some of the advantages and disadvantages for both.
+
+If you have any lingering questions or suggestions for an article you want me to cover in the future, feel free to leave a comment in the comment section below.
+
+Lastly, make sure to follow my newsletter so you never miss out on when I post new content! When you subscribe to my newsletter, you'll be able to read my articles straight from your inbox as soon as they're released.
+
+---
+
+![a person typing on a laptop on a desk](https://cdn.hashnode.com/res/hashnode/image/upload/v1694158493008/jsZzIo77t.jpg?w=800&auto=compress&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp align="center")
+
+This article is part of a series called [**Bit by Bit**](https://scrappedscript.com/series/bit-by-bit), a series devoted to all things programming. Whether you're still a computer science undergrad or the CTO of Apple, there's something for you here.
+
+New articles in this series are posted every Tuesday!
