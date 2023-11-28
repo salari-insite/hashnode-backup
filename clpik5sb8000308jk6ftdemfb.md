@@ -1,0 +1,118 @@
+---
+title: "Utilizing Keras to Augment Images"
+datePublished: Tue Nov 28 2023 16:34:17 GMT+0000 (Coordinated Universal Time)
+cuid: clpik5sb8000308jk6ftdemfb
+slug: utilizing-keras-to-augment-images
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/ZIPFteu-R8k/upload/291bb5fb85490086bdc6def461d4899a.jpeg
+tags: image-processing, python, machine-learning, keras
+
+---
+
+# Introduction
+
+> In this article, we discuss how to install Keras and Skimage, and demonstrate the process of image augmentation using the ImageDataGenerator object from Keras. Image augmentation is useful for creating larger training datasets for object recognition models, such as HOG or CNN, by artificially generating new images based on the original ones. We provide step-by-step instructions for installing the required libraries, loading and reshaping images, and finally, generating augmented images.
+
+---
+
+## How to install Keras
+
+To install Keras, you have to install the TensorFlow package.
+
+To install TensorFlow:
+
+```bash
+pip install tensorflow
+```
+
+After installing the TensorFlow package, you've now installed Keras onto your system.
+
+To use Keras in your Python file:
+
+```python
+from tensorflow import keras
+```
+
+---
+
+## How to install Skimage
+
+To load in our image, we'll be using SciKit, but you may wish to use another library to load in your image if you'd prefer.
+
+To install Skimage:
+
+```bash
+pip install scikit-image
+```
+
+---
+
+## Image augmentation
+
+To start, make sure to import the required modules into your Python file:
+
+```python
+from keras.preprocessing.image import ImageDataGenerator
+from skimage import io
+```
+
+### ImageDataGenerator object
+
+The next step is to use the ImageDataGenerator object from Keras to define how you want the augmented image(s) to be transformed:
+
+```python
+datagen = ImageDataGenerator(
+    rotation_range=40,  # randomly rotate images in the range (degrees, 0 to 180)
+    width_shift_range=0.2,  # randomly shift images horizontally (fraction of total width)
+    height_shift_range=0.2,  # randomly shift images vertically (fraction of total height)
+    shear_range=0.2,  # set range for random shear
+    zoom_range=0.2,  # set range for random zoom
+    horizontal_flip=True,  # randomly flip images
+    fill_mode='nearest')  # set mode for filling points outside the input boundaries
+```
+
+When you set 'fill\_mode' to 'nearest', any space created in the augmented images will be filled with colored pixels that match the colors of the pixels near the space.
+
+Another option for 'fill\_mode' is to set it to 'constant'. When you set it to constant, the space in the augmented images will be filled with black pixels by default. If you want to use grey or white pixels, you can do so by including a 2nd argument after 'fill\_mode', like so: "fill\_mode='nearest', '150'".
+
+### Load image and reshape
+
+In this step, you'll load your image into Python. Additionally, we'll be reshaping the image array data.
+
+```python
+input_image = io.imread('path/to/image')
+input_image = input_image.reshape((1,) + input_image.shape)
+```
+
+### Generate *x* augmented images
+
+The final step is to generate your augmented images!
+
+The following code demonstrates creating and saving 20 augmented images:
+
+```python
+i = 0
+for batch in datagen.flow(input_image, batch_size=16, save_to_dir='path/to/save/images', save_prefix='prefix', save_format='jpeg'):
+        i += 1
+        if i == 19:
+            break
+```
+
+In the above code, we're calling the .flow function on our ImageDataGenerator object and passing in our input\_image, a batch size of 16 (this means it will augment 16 sample images at a time), specifying the directory to save the augmented images, specifying the prefix to put at the beginning of all the file names, and finally, the file format of the augmented images.
+
+---
+
+## What's the benefit of image augmentation?
+
+If you're trying to train a histogram of oriented gradients (HOG) model or a convolutional neural network (CNN) model to do any type of object recognition, then image augmentation may be of use to you.
+
+In particular, if you don't have a large enough training dataset of images, then you can artificially create a large dataset of training images by augmenting the original images that you already have.
+
+By creating this image augmentation pipeline, your model will train not only on the original images contained in your training dataset but also all of the augmented images that are generated based on those original images.
+
+---
+
+![a person typing on a laptop on a desk](https://cdn.hashnode.com/res/hashnode/image/upload/v1694158493008/jsZzIo77t.jpg?w=800&auto=compress&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp align="center")
+
+This article is part of a series called [**Bit by Bit**](https://scrappedscript.com/series/bit-by-bit), a series devoted to all things programming. Whether you're still a computer science undergrad or the CTO of Apple, there's something for you here.
+
+New articles in this series are posted every Tuesday!
