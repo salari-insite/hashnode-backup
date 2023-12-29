@@ -80,7 +80,7 @@ However, for kickstarting documentation, Copilot is a decent tool. I don't know 
 
 ### Ambiguous/incorrect code suggestions
 
-### Learning curve
+### Cost
 
 ### Code quality
 
