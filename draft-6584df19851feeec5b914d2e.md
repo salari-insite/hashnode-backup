@@ -34,6 +34,8 @@ In summary, GitHub Copilot's strengths lie in its powerful AI-driven capabilitie
 
 ### Efficiency and productivity
 
+![a laptop computer sitting on top of a wooden desk](https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D align="center")
+
 One of the most appealing features of GitHub Copilot is how little code I sometimes need to type. In very simple scenarios, it can suggest precisely, or almost precisely, what I intended to type. Moreover, the suggestions aren't just brief lines here and there; Copilot's recommendations can span several lines and complete entire functions. Consequently, you naturally spend less time fussing with typing boilerplate code and code that feels rudimentary to type.
 
 For example, I recently embarked on a learning journey through the free lectures hosted on FreeCodeCamp's website, aiming to complete the certification for ["Machine Learning with Python"](https://www.freecodecamp.org/learn/machine-learning-with-python/). Throughout the entire process, I had Copilot as my trusty companion in VSCode. To my amazement, I found myself typing very little code, even when the lectures delved into more complex, code-heavy topics.
@@ -50,11 +52,15 @@ As previously mentioned, Copilot not only provides code suggestions at every ste
 
 For example, when I used Copilot while learning machine learning in Python, I was amazed to find that Copilot's code suggestions were accurate down to the finest details, even including the exact URL of the datasets I wanted to use in my programs. This level of accuracy is truly impressive and sets Copilot apart from other tools.
 
+![a man sitting at a table using a laptop computer](https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D align="center")
+
 In my experience, I'd estimate that for basic tasks, Copilot's suggestions are accurate about 99% of the time. This makes Copilot an incredibly valuable resource for developers, especially when compared to traditional methods like Google searches, which don't always yield accurate results quickly. With Copilot, not only is the answer available in real-time, but you can also trust that it's highly likely to be accurate.
 
 This high level of accuracy and real-time assistance can significantly improve a developer's workflow, reducing the time spent searching for solutions and increasing overall productivity. By providing reliable and contextually accurate suggestions, Copilot has the potential to become an indispensable tool for developers of all skill levels.
 
 ### Time savings
+
+![a close up of a person wearing a watch](https://images.unsplash.com/photo-1495704907664-81f74a7efd9b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D align="center")
 
 Finally, let's discuss time savings. As suggested by my first point, Copilot saves a considerable amount of time that would otherwise be spent typing boilerplate code or basic code.
 
