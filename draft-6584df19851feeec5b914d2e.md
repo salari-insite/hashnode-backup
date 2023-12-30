@@ -78,6 +78,14 @@ However, for kickstarting documentation, Copilot is a decent tool. I don't know 
 
 ## The Cons: Addressing the Limitations
 
+This wouldn't be an honest review if I didn't discuss some of the cons and drawbacks that I personally encountered, and which I believe others may experience as well.
+
+I will discuss 3 major cons, but keep in mind that there are plenty more that I won't be mentioning, which have been previously addressed by others in their commentary.
+
+It's important to acknowledge that AI tools are still quite new, and as a result, they're in their early stages regarding how advanced they are at accomplishing their tasks and goals. I believe that as time goes on and these tools continue to be developed, they will only improve.
+
+I also want to preface by saying that I don't buy into the fear-mongering that tools like Copilot will take the jobs of software engineers and developers. As these tools continue to improve, I believe they will simply be integrated into the workflow for developers, making each developer more capable and productive. Ultimately, the primary goal of these tools is to enhance developer productivity, not to create tools that will replace developers themselves.
+
 ### Ambiguous/incorrect code suggestions
 
 ### Cost
