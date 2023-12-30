@@ -1,6 +1,6 @@
 ---
-title: "An Honest Review of GitHub Copilot"
-slug: an-honest-review-of-github-copilot
+title: "Assessing GitHub Copilot: A Candid Overview"
+slug: assessing-github-copilot-a-candid-overview
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/UT8LMo-wlyk/upload/6585adde93b70e5db702a81ce15e6e1b.jpeg
 tags: copilot, github, productivity
 
