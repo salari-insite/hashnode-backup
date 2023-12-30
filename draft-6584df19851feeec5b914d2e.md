@@ -88,6 +88,8 @@ I also want to preface by saying that I don't buy into the fear-mongering that t
 
 ### Ambiguous/incorrect code suggestions
 
+![a blue question mark on a pink background](https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D align="center")
+
 Now, I understand that this point may appear to contradict one of the advantages I mentioned earlier, where Copilot provides highly accurate suggestions. However, it's crucial to acknowledge that I was referring to relatively simple contexts. In more complex situations, particularly those involving proprietary software or specialized tools utilized by businesses, Copilot's suggestions might not be as impressive or accurate as one would hope.
 
 It's important to remember that AI models like Copilot are trained on vast amounts of publicly available code, which means that their understanding of proprietary or industry-specific tools may be limited. As a result, developers working with such tools may find that Copilot's suggestions are less helpful or even incorrect in certain cases. This is not to say that Copilot is entirely ineffective in these situations, but rather that its effectiveness may be somewhat diminished.
@@ -95,6 +97,8 @@ It's important to remember that AI models like Copilot are trained on vast amoun
 That being said, I cannot definitively confirm whether this is true or not, as I am still a college student without direct experience working in the field. However, it's worth considering this potential limitation when evaluating the usefulness of AI-powered code assistants like Copilot. As these tools continue to evolve and improve, it's possible that their understanding of specialized tools and proprietary software will expand, making them even more valuable for developers across various industries and domains.
 
 ### Cost
+
+![a dollar bill sticking out of the back pocket of a pair of jeans](https://images.unsplash.com/photo-1692598506940-da51e1c42143?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D align="center")
 
 This is both a drawback I have yet to experience (since I'm currently able to use Copilot for free as a college student) and a drawback that is not subjective, but simply factual: Copilot costs money.
 
@@ -106,9 +110,13 @@ I cannot answer this question, as everyone's situation is unique. However, I wil
 
 Although Copilot is impressive, there are plenty of free and user-friendly resources available, including both traditional materials and AI tools like ChatGPT.
 
+If Copilot's capabilities significantly surpass the free resources available, then perhaps I would reconsider my stance on paying for it.
+
 That being said, GitHub does offer a free 30-day trial for trying out Copilot. So, if you want to see what all the hype is about for yourself, you can at least do so without any cost.
 
 ### Annoying while learning new language
+
+![a woman sitting on a bench with a laptop](https://images.unsplash.com/photo-1599687266725-0d4d52716b86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D align="center")
 
 Unlike the other drawbacks I mentioned, this one I can personally vouch for.
 
@@ -125,3 +133,21 @@ In summary, while Copilot can be a valuable tool for experienced developers work
 ---
 
 ## Conclusion
+
+In conclusion, GitHub Copilot is a powerful AI-driven tool that offers a wealth of benefits for developers, particularly in terms of efficiency, accuracy, and time savings.
+
+However, it's not without its limitations. The effectiveness of its code suggestions can be compromised in unique scenarios, the cost may be prohibitive for some, and its constant input can be more of a hindrance than a help when learning a new programming language.
+
+As with any tool, its value will largely depend on the specific needs and circumstances of the user. Despite its drawbacks, Copilot's potential to enhance developer productivity is undeniable, and it will be interesting to see how it evolves in the future.
+
+If you have any lingering questions or suggestions for an article you want me to cover in the future, feel free to leave a comment in the comment section below.
+
+Lastly, make sure to follow my newsletter so you never miss out on when I post new content! When you subscribe to my newsletter, you'll be able to read my articles straight from your inbox as soon as they're released.
+
+---
+
+![a person typing on a laptop on a desk](https://cdn.hashnode.com/res/hashnode/image/upload/v1694158493008/jsZzIo77t.jpg?w=800&auto=compress&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp align="center")
+
+This article is part of a series called [**Bit by Bit**](https://scrappedscript.com/series/bit-by-bit), a series devoted to all things programming. Whether you're still a computer science undergrad or the CTO of Apple, there's something for you here.
+
+New articles in this series are posted every Tuesday!
