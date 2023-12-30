@@ -88,9 +88,39 @@ I also want to preface by saying that I don't buy into the fear-mongering that t
 
 ### Ambiguous/incorrect code suggestions
 
+Now, I understand that this point may appear to contradict one of the advantages I mentioned earlier, where Copilot provides highly accurate suggestions. However, it's crucial to acknowledge that I was referring to relatively simple contexts. In more complex situations, particularly those involving proprietary software or specialized tools utilized by businesses, Copilot's suggestions might not be as impressive or accurate as one would hope.
+
+It's important to remember that AI models like Copilot are trained on vast amounts of publicly available code, which means that their understanding of proprietary or industry-specific tools may be limited. As a result, developers working with such tools may find that Copilot's suggestions are less helpful or even incorrect in certain cases. This is not to say that Copilot is entirely ineffective in these situations, but rather that its effectiveness may be somewhat diminished.
+
+That being said, I cannot definitively confirm whether this is true or not, as I am still a college student without direct experience working in the field. However, it's worth considering this potential limitation when evaluating the usefulness of AI-powered code assistants like Copilot. As these tools continue to evolve and improve, it's possible that their understanding of specialized tools and proprietary software will expand, making them even more valuable for developers across various industries and domains.
+
 ### Cost
 
-### Code quality
+This is both a drawback I have yet to experience (since I'm currently able to use Copilot for free as a college student) and a drawback that is not subjective, but simply factual: Copilot costs money.
+
+At the time of writing this article, the cost for Copilot is as follows: $10/month for individuals, $19/user/month for businesses, and $39/user/month for enterprises.
+
+Now, aside from the fact that Copilot would be another monthly subscription that might catch you off guard, you have to ask yourself: "Is it worth the cost for what I do?".
+
+I cannot answer this question, as everyone's situation is unique. However, I will say that if I were a student and had to pay $10/month for Copilot, I wouldn't. In my opinion, unless your company provides Copilot as a complimentary "perk," it's not worth using.
+
+Although Copilot is impressive, there are plenty of free and user-friendly resources available, including both traditional materials and AI tools like ChatGPT.
+
+That being said, GitHub does offer a free 30-day trial for trying out Copilot. So, if you want to see what all the hype is about for yourself, you can at least do so without any cost.
+
+### Annoying while learning new language
+
+Unlike the other drawbacks I mentioned, this one I can personally vouch for.
+
+One of the use cases where I've tried Copilot is while learning the C programming language. I quickly realized how much it hindered my learning, so I disabled it in my workspace designated for learning C (which is very easy to do, by the way).
+
+Recall at the beginning of this article when I mentioned that Copilot is like having another developer constantly looking over your shoulder and providing commentary every second? Well, this isn't ideal when trying to learn a new programming language.
+
+When embarking on the journey to learn a new programming language, I found that Copilot transformed from a helpful assistant into an intrusive companion, negatively impacting my ability to concentrate on the learning process. The primary objective of learning a new programming language is to gain a comprehensive understanding of the syntax, enabling efficient navigation and problem-solving within the language. Additionally, it's crucial to develop the skills required to independently create and manage projects using the language. However, with Copilot's constant input and suggestions, it becomes increasingly challenging to achieve these goals.
+
+As a developer trying to learn a new language, it's essential to engage in hands-on practice, trial and error, and problem-solving exercises to build a strong foundation. Copilot's continuous presence and guidance can inadvertently lead to over-reliance on its suggestions, preventing learners from developing their own understanding and intuition. By constantly providing commentary and solutions, Copilot may hinder the growth of critical thinking and problem-solving skills, which are vital for mastering any programming language.
+
+In summary, while Copilot can be a valuable tool for experienced developers working on complex projects, it may not be the ideal companion for those attempting to learn a new programming language. Its constant input can obstruct the learning process, making it difficult for learners to develop the necessary skills and understanding to become proficient in their chosen language.
 
 ---
 
