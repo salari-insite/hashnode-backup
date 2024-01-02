@@ -1,0 +1,345 @@
+---
+title: "How to Build a Web Scraper Using Python"
+datePublished: Tue Jan 02 2024 16:33:20 GMT+0000 (Coordinated Universal Time)
+cuid: clqwkjder000108l83cfk94lj
+slug: how-to-build-a-web-scraper-using-python
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/Skf7HxARcoc/upload/b904040e2579644fcaf3a8aa46bbb74d.jpeg
+tags: python, selenium, web-scraping, beautifulsoup
+
+---
+
+# Introduction
+
+> This article provides a step-by-step guide on building a web scraper using Python. It begins with understanding the URL structure of the target website, here CNN, and then importing necessary libraries like Selenium, requests, and BeautifulSoup. It explains how to load a URL and locate target elements using Selenium, along with error handling to avoid program crashes. The article also covers parsing the text of the articles using BeautifulSoup. Finally, it demonstrates the results by running the script and successfully scraping the text from a CNN article.
+
+## Discovering URL structure of target website
+
+Before you can begin building a web scraper, you first have to understand the structure of the URLs that you'll be targeting.
+
+In this tutorial, we'll be scraping text from CNN articles. So we'll start by heading to cnn.com and seeing if there's any search bar on the main webpage.
+
+![cnn home webpage](https://cdn.hashnode.com/res/hashnode/image/upload/v1704209139408/e2daa943-acab-43bf-93f3-47f509d12a6e.png align="center")
+
+As we can see at the top right of the homepage, there's a little search icon. Let's next click on the icon and see where we're taken.
+
+![cnn search bar](https://cdn.hashnode.com/res/hashnode/image/upload/v1704209223471/f9c86a3e-d4d3-45af-b8bd-fee2459152f2.png align="center")
+
+After clicking the search icon, we're taken to this search bar. Let's next search for a term and then see what URL we're taken to.
+
+![programming search on cnn website](https://cdn.hashnode.com/res/hashnode/image/upload/v1704209300784/7a941a6d-1d70-487b-b8d0-01d5cd59c939.png align="center")
+
+We're taken to this page where the URL is: [https://www.cnn.com/search?q=programming&from=0&size=10&page=1&sort=newest&types=all&section](https://www.cnn.com/search?q=programming&from=0&size=10&page=1&sort=newest&types=all&section).
+
+We can now identify the structure for our target URLs. First, we have the protocol (https), then the domain (cnn.com), followed by the search subdomain path (/search) and finally the queries. As we can see from the first query pair (q=programming), this is where our search term that we typed into the search bar is placed in the URL. All of the other query pairs are default and can remain constant for our project.
+
+Therefore that means that the only part of the URL that will be variable is the query pair "q=*search term*".
+
+Now that we know our target URL structure, let's start building our webscraper.
+
+## Importing necessary libraries
+
+Let's start by importing all of the necessary library components that we'll be using.
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
+import requests
+from bs4 import BeautifulSoup
+```
+
+We'll be using Selenium for loading the target URL and basic navigation on the target URL's webpage. Next, we'll be using requests and BeautifulSoup to load the article and parse the article's text.
+
+## Loading the URL using Selenium
+
+Next, we'll define our target URL structure, and load the target URL with Selenium.
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
+import requests
+from bs4 import BeautifulSoup
+
+def search_cnn(search_term):
+
+    URL = "https://www.cnn.com/search?q=" + search_term + "&from=0&size=10&page=1&sort=newest&types=all&section="
+
+    # Set up driver
+    options = Options()
+    options.add_argument("--headless")
+    options.page_load_strategy = 'eager'
+    driver = webdriver.Chrome(options=options)
+    driver.get(URL)
+```
+
+As mentioned before, the only variable in our target URLs will be that search term, so we can just copy and paste the rest of the URL since those will remain constant.
+
+Next, we're defining certain parts of the Options class taken from the Selenium module.
+
+The `options.add_argument("--headless")` prevents the browser window from opening on the screen.
+
+The `options.page_load_strategy = 'eager'` is changing the default value of "normal" to "eager". With "normal" as the value, the web driver will wait for all of the resources on a webpage to finish loading. On the other hand, "eager" just waits for basic HTML elements to load.
+
+Finally, in the last 2 lines, we're setting up our Selenium WebDriver (a tool that allows us to load and navigate the webpage) and passing in our URL to the driver so it can start loading the webpage.
+
+## Locating target element(s) using Selenium
+
+Before we proceed with adding more code to our program, let's inspect the webpage we're taken to after searching for a term, and see how we can target the first article on the page.
+
+![inspecting cnn search webpage](https://cdn.hashnode.com/res/hashnode/image/upload/v1704210889425/b7fd458a-fb6d-4b6e-abf5-6c0e05cea568.png align="center")
+
+If we inspect the image corresponding to the article, we see that the image has an anchor tag that directs users to the article. So we can simply target this anchor tag by choosing one of its classes (we'll choose the "container\_\_link" class) for the driver to look for after the page has loaded.
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
+import requests
+from bs4 import BeautifulSoup
+
+def search_cnn(search_term):
+
+    URL = "https://www.cnn.com/search?q=" + search_term + "&from=0&size=10&page=1&sort=newest&types=all&section="
+
+    # Set up driver
+
+    # Only load HTML
+    options = Options()
+    options.add_argument("--headless")
+    options.page_load_strategy = 'eager'
+    driver = webdriver.Chrome(options=options)
+    driver.get(URL)
+
+    try:
+        # Wait for the page to load
+        elem = WebDriverWait(driver, 15).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "container__link")))
+
+        # Find the first article and click on it
+        article = driver.find_element(By.CLASS_NAME, "container__link")
+        article.click()
+```
+
+With the `elem = WebDriverWait(driver, 15).until( EC.presence_of_element_located((By.CLASS_NAME, "container__link")))` lines, we're telling the driver to wait for the page to load the page until it finds a HTML tag with that class name. Additionally, we're adding a parameter (the 15) to mean that if it's been 15 seconds, then we can just stop loading the page.
+
+Finally, after the element has loaded, we're simply going to use Selenium's click function so that the driver can click on the anchor tag that was located (which will take us to the URL of the first article that's on the search page).
+
+### Error handling
+
+If you notice in the above code, there's a try block. Let's add in some error handling for when there's a timeout error by using the TimeoutException included in the Selenium library.
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
+import requests
+from bs4 import BeautifulSoup
+
+def search_cnn(search_term):
+
+    URL = "https://www.cnn.com/search?q=" + search_term + "&from=0&size=10&page=1&sort=newest&types=all&section="
+
+    # Set up driver
+
+    # Only load HTML
+    options = Options()
+    options.add_argument("--headless")
+    options.page_load_strategy = 'eager'
+    driver = webdriver.Chrome(options=options)
+    driver.get(URL)
+
+    try:
+        # Wait for the page to load
+        elem = WebDriverWait(driver, 15).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "container__link")))
+
+        # Find the first article and click on it
+        article = driver.find_element(By.CLASS_NAME, "container__link")
+        article.click()
+
+    except TimeoutException as e:
+        results = "Page took too long to load"
+        return results
+```
+
+With this error handling, we're simply preventing our program from crashing in the event that our target URL takes too long to load.
+
+## Parsing text using BeautifulSoup
+
+Before continuing with writing more code, let's now inspect the webpage for the CNN article to see how we can identify the headline of an article as well as of the main text of the article.
+
+![inspecting CNN article webpage](https://cdn.hashnode.com/res/hashnode/image/upload/v1704212181847/ad5c0bde-31c5-4377-8a0d-b9cd5b4daa6d.png align="center")
+
+As we can see, the headline for CNN articles is an h1 tag, so we can simply have BeautifulSoup parse the text of the h1 tag located on the webpage.
+
+Next, let's identify the text of the article.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1704212305217/7425e08d-a3c8-4ef2-9066-39647d4cdbcd.png align="center")
+
+As we can see, CNN puts a class name of "paragraph" for all of the paragraphs that contain the article text. So we can simply have BeautifulSoup grab all of the elements with the class of "paragraph" and then parse the text inside.
+
+Finally, let's parse the text that's in the article that we're taken to by the driver.
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
+import requests
+from bs4 import BeautifulSoup
+
+def search_cnn(search_term):
+
+    URL = "https://www.cnn.com/search?q=" + search_term + "&from=0&size=10&page=1&sort=newest&types=all&section="
+
+    # Set up driver
+
+    # Only load HTML
+    options = Options()
+    options.add_argument("--headless")
+    options.page_load_strategy = 'eager'
+    driver = webdriver.Chrome(options=options)
+    driver.get(URL)
+
+    try:
+        # Wait for the page to load
+        elem = WebDriverWait(driver, 15).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "container__link")))
+
+        # Find the first article and click on it
+        article = driver.find_element(By.CLASS_NAME, "container__link")
+        article.click()
+
+    except TimeoutException as e:
+        results = "Page took too long to load"
+        return results
+
+    finally:
+        current_url = driver.current_url
+        
+        page = requests.get(current_url)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        headline = soup.find('h1').get_text().strip()
+        paragraphs = soup.find_all(class_='paragraph')
+        text = ''
+        for paragraph in paragraphs:
+            text += paragraph.text.strip()
+
+        link = "Article found at: " + current_url
+        results = (headline, text, link)
+
+        driver.quit()
+
+    return results
+```
+
+First, we're grabbing the current URL (the URL of the article that we're taken to by the driver) and we're sending a GET request using the requests library.
+
+Next, we're using BeautifulSoup to parse the HTML on the page of the article.
+
+As you can see for the paragraphs, we're using the `find_all()` method which will return a list of all of the elements that have the class of "paragraph". Therefore, in order to access the text within the paragraphs, we'll have to iterate over the list of paragraphs, parse the text for each of the paragraphs, and then add the pure text to a running string of text that we define before the for-loop.
+
+Finally, we'll have the driver quit the browser session, and return our results as as tuple.
+
+## Putting it all together
+
+Now that we finished writing our function, let's try running it as a script and see what we get.
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
+import requests
+from bs4 import BeautifulSoup
+
+def search_cnn(search_term):
+
+    URL = "https://www.cnn.com/search?q=" + search_term + "&from=0&size=10&page=1&sort=newest&types=all&section="
+
+    # Set up driver
+
+    # Only load HTML
+    options = Options()
+    options.add_argument("--headless")
+    options.page_load_strategy = 'eager'
+    driver = webdriver.Chrome(options=options)
+    driver.get(URL)
+
+    try:
+        # Wait for the page to load
+        elem = WebDriverWait(driver, 15).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "container__link")))
+
+        # Find the first article and click on it
+        article = driver.find_element(By.CLASS_NAME, "container__link")
+        article.click()
+
+    except TimeoutException as e:
+        results = "Page took too long to load"
+        return results
+
+    finally:
+        current_url = driver.current_url
+        
+        page = requests.get(current_url)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        headline = soup.find('h1').get_text().strip()
+        paragraphs = soup.find_all(class_='paragraph')
+        text = ''
+        for paragraph in paragraphs:
+            text += paragraph.text.strip()
+
+        link = "Article found at: " + current_url
+        results = (headline, text, link)
+
+        driver.quit()
+
+    return results
+
+
+if __name__ == '__main__':
+    SEARCH_TERM = 'programming'
+    print(search_cnn(SEARCH_TERM))
+```
+
+![output of running python script](https://cdn.hashnode.com/res/hashnode/image/upload/v1704212725712/c8a6420e-baf1-4818-b961-c4f3e3f8a154.png align="center")
+
+After running the script, we see all of the article text (along with the headline and link) printed out beautifully in the terminal.
+
+## Conclusion
+
+In this tutorial, we walked through the steps of creating a web scraper using Python. We started with understanding the URL structure of our target website (CNN) and then proceeded to import necessary libraries like Selenium, requests, and BeautifulSoup.
+
+We learned how to load a URL and locate target elements using Selenium. We also discussed error handling to avoid program crashes. Then, we parsed the text of the articles using BeautifulSoup.
+
+Finally, we put it all together and ran our script, successfully scraping the text from a CNN article. This process showcases how Python can be very powerful in web scraping, opening up a wide range of possibilities for data collection and analysis.
+
+If you have any lingering questions or suggestions for an article you want me to cover in the future, feel free to leave a comment in the comment section below.
+
+Lastly, make sure to follow my newsletter so you never miss out on when I post new content! When you subscribe to my newsletter, you'll be able to read my articles straight from your inbox as soon as they're released.
+
+---
+
+![a person typing on a laptop on a desk](https://cdn.hashnode.com/res/hashnode/image/upload/v1694158493008/jsZzIo77t.jpg?w=800&auto=compress&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp&auto=compress,format&format=webp align="center")
+
+This article is part of a series called [**Bit by Bit**](https://scrappedscript.com/series/bit-by-bit), a series devoted to all things programming. Whether you're still a computer science undergrad or the CTO of Apple, there's something for you here.
+
+New articles in this series are posted every Tuesday!
