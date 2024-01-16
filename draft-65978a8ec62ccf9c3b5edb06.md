@@ -22,3 +22,9 @@ Hoisting is a phenomenon that takes place when all variable declarations are shi
 In contrast, when using `let` and `const` for variable declarations, hoisting still occurs, but the variables are not initialized until their actual declaration is reached in the code. This creates a temporal dead zone (TDZ) between the beginning of the scope and the point of declaration, during which accessing or manipulating the variables would result in a ReferenceError. This behavior helps to prevent unintended consequences and encourages a more predictable coding environment.
 
 ## Redeclaring variables
+
+The last significant reason to avoid using `var` when declaring variables in JavaScript lies in the fact that variables declared with `var` can be re-declared without any warnings or error messages. This lack of feedback can result in unintentional overwriting of variables, which may lead to unexpected behavior in your code and create hard-to-find bugs.
+
+When a variable is re-declared using `var`, the original value is simply replaced with the new one, and the code continues to execute without any indication that something may have gone wrong. This can be particularly problematic in larger codebases or when working with multiple developers, as it increases the likelihood of accidentally overwriting a variable that was intended to remain constant throughout the code.
+
+In contrast, using `let` or `const` to declare variables provides a safeguard against this issue. If you attempt to re-declare a variable that has already been declared with `let` or `const`, JavaScript will throw an error, alerting you to the potential problem and preventing the code from executing further until the issue is resolved. This behavior encourages more predictable and reliable coding practices, reducing the risk of unintended consequences and promoting a more stable development environment.
